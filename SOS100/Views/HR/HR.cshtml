@@ -1,0 +1,51 @@
+@model SOS100.Models.Formaner
+
+
+
+<head>
+    <title></title>
+</head>
+
+<body>
+
+<p>Create a benefit</p>
+
+<form asp-action="Create"> 
+    Titel <br/>
+    <input asp-for="Title"/> <br/>
+    Kategorie:  <br/>
+    <input asp-for="categorie"/> <br/>
+    Beskrivning: <br/>
+    <input asp-for="Description"/> <br/>
+    <input type="submit" value="Spara"/>
+</form>
+
+<p>Redigera en personalförmån:</p>
+
+<form asp-action="Edit"> 
+    ID: <br/>
+    <input asp-for="ID"/> <br/>
+    Titel <br/>
+    <input asp-for="Title"/> <br/>
+    Kategorie:  <br/>
+    <input asp-for="categorie"/> <br/>
+    Beskrivning: <br/>
+    <input asp-for="Description"/> <br/>
+    <input type="submit" value="Edit"/>
+</form>
+
+<p>Radera en personalförmån:</p>
+
+<form asp-action="Delete">
+    ID: <br/>
+    <input asp-for="ID"/> <br/>
+    Titel <br/>
+    <input asp-for="Title"/> <br/>
+    Kategorie:  <br/>
+    <input asp-for="categorie"/> <br/>
+    Beskrivning: <br/>
+    <input asp-for="Description"/> <br/>
+    <input type="submit" value="Delete"/>
+</form>
+
+</body>

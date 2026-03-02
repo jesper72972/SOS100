@@ -1,0 +1,26 @@
+@using System.Xml
+@model Formaner[]
+<link rel="stylesheet" href="~/css/formaner.css"/>
+
+@{
+    ViewData["Title"] = "Förmåner:";
+}    
+
+<h2>@ViewData["Title"]</h2> 
+
+@if (Model == null || !Model.Any())
+{
+    <p>The to do list is empty</p>
+}
+else
+{ 
+    <div>
+        @foreach (var forman in Model.OrderBy(x => x.Title)) 
+        {
+
+            <p id="titel">@forman.Title</p>
+            <p id="categorie">@forman.categorie</p>
+            <p id="description">@forman.Description</p>
+        }
+    </div>
+}

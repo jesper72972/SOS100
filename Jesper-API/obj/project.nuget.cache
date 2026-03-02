@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "3iq2U+/23Bc=",
+  "success": true,
+  "projectFilePath": "/Users/jesperlindqvist/Desktop/SOS100/Jesper-API/Jesper-API.csproj",
+  "expectedPackageFiles": [
+    "/Users/jesperlindqvist/.nuget/packages/microsoft.aspnetcore.openapi/10.0.3/microsoft.aspnetcore.openapi.10.0.3.nupkg.sha512",
+    "/Users/jesperlindqvist/.nuget/packages/microsoft.openapi/2.0.0/microsoft.openapi.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
