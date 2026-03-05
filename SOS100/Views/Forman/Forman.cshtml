@@ -1,5 +1,6 @@
-@using System.Xml
+@using SOS100.Models;
 @model Formaner[]
+
 <link rel="stylesheet" href="~/css/formaner.css"/>
 
 @{
@@ -21,6 +22,11 @@ else
             <p id="titel">@forman.Title</p>
             <p id="categorie">@forman.categorie</p>
             <p id="description">@forman.Description</p>
+
+        <p>Create a benefit</p>
+
+      
         }
     </div>
+    
 }

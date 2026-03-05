@@ -2,6 +2,7 @@ using formaner_API.Data;
 using formaner_API.Models;
 using Microsoft.AspNetCore.Mvc;
 using formaner_API.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace formaner_API.Controllers;
 
@@ -24,10 +25,33 @@ public class FormanerController : ControllerBase
         return formaners;
     }
 
+   
+
+   
     [HttpPost]
-    public void PostForman(Formaner formaner)
+    public IActionResult Create(Formaner newFormaner)
     {
-        _dbContext.Add(formaner);
+        _dbContext.Formaners.Add(newFormaner);
         _dbContext.SaveChanges();
+        return Ok(newFormaner);
     }
+    
+[HttpPost("Edit")] 
+    public IActionResult Edit(Formaner formaner)
+    {
+        _dbContext.Formaners.Update(formaner);
+        _dbContext.SaveChanges();
+        return Ok(formaner);
+    }
+
+    [HttpDelete("{ID}")]
+    public IActionResult Delete(int ID ) 
+    {
+        var formaner = _dbContext.Formaners.Find(ID);
+
+        _dbContext.Formaners.Remove(formaner);
+        _dbContext.SaveChanges();
+        return Ok(formaner);
+    }
+    
 }

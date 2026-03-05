@@ -23,4 +23,20 @@ public class FormanService
         
         return result;
     }
+    
+    public async Task CreateForman(Formaner formaner)
+    {
+        await _httpClient.PostAsJsonAsync("Formaner", formaner);
+    }
+
+    public async Task EditForman(Formaner formaner)
+    {
+        await _httpClient.PostAsJsonAsync("Formaner/Edit", formaner);
+    }
+
+    public async Task DeleteForman(int ID)
+    {
+        await _httpClient.DeleteAsync($"Formaner/{ID}");
+    }
+    
 }

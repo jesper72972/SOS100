@@ -7,7 +7,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddHttpClient<FormanService>((ServiceProvider, httpClient)  =>
 {
-    httpClient.BaseAddress = new Uri("http://localhost:5028");
+    httpClient.BaseAddress = new Uri("http://localhost:5028/Formaner");
 });
 
 var app = builder.Build();

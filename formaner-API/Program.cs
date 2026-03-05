@@ -1,7 +1,7 @@
 using formaner_API.Data;
 using Scalar.AspNetCore;
 using Microsoft.EntityFrameworkCore;
-
+using formaner_API.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -13,11 +13,12 @@ public class FormanController : Controller
     {
         _formanService = formanService;
     }
-
     public async Task<IActionResult> Forman()
     {
        Formaner[] formans = await _formanService.GetFormans();
         return View(formans); 
     }
+    
+   
    
 }

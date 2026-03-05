@@ -1,15 +1,12 @@
-using SOS100.Models;
 using Microsoft.EntityFrameworkCore;
+namespace formaner_API.Models;
 
-namespace SOS100.Models;
-
-
-    public class formanerDbContext : DbContext
+    public class FormanerDbContext : DbContext
     {
         public DbSet<Formaner> Formaners { get; set; } 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("DataSource = FormanerDB.db");
+            optionsBuilder.UseSqlite("DataSource = demo-service-dev.db");
         }
     }
