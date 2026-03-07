@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using SOS100.Models;
@@ -6,6 +7,7 @@ using SOS100.Services;
 
 namespace SOS100.Controllers;
 
+[Authorize]
 public class HRController : Controller
 {
     public IActionResult HR()
