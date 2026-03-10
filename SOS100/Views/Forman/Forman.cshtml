@@ -18,14 +18,9 @@ else
     <div>
         @foreach (var forman in Model.OrderBy(x => x.Title)) 
         {
-
             <p id="titel">@forman.Title</p>
             <p id="categorie">@forman.categorie</p>
-            <p id="description">@forman.Description</p>
-
-        <p>Create a benefit</p>
-
-      
+            <p id="description">@forman.Description</p> 
         }
     </div>
     
