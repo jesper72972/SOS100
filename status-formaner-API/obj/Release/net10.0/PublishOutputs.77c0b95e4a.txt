@@ -1,0 +1,10 @@
+C:\Users\axell\AppData\Local\Temp\rider-publish14459874996962534920\status-formaner-API.exe
+C:\Users\axell\AppData\Local\Temp\rider-publish14459874996962534920\appsettings.Development.json
+C:\Users\axell\AppData\Local\Temp\rider-publish14459874996962534920\appsettings.json
+C:\Users\axell\AppData\Local\Temp\rider-publish14459874996962534920\status-formaner-API.dll
+C:\Users\axell\AppData\Local\Temp\rider-publish14459874996962534920\status-formaner-API.deps.json
+C:\Users\axell\AppData\Local\Temp\rider-publish14459874996962534920\status-formaner-API.runtimeconfig.json
+C:\Users\axell\AppData\Local\Temp\rider-publish14459874996962534920\status-formaner-API.pdb
+C:\Users\axell\AppData\Local\Temp\rider-publish14459874996962534920\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\axell\AppData\Local\Temp\rider-publish14459874996962534920\Microsoft.OpenApi.dll
+C:\Users\axell\AppData\Local\Temp\rider-publish14459874996962534920\Scalar.AspNetCore.dll
