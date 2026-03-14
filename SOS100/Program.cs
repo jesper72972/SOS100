@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using SOS100.Services;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -12,6 +13,11 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 builder.Services.AddHttpClient<FormanService>((ServiceProvider, httpClient)  =>
 {
     httpClient.BaseAddress = new Uri("http://localhost:5028/Formaner");
+});
+
+builder.Services.AddHttpClient<FormanerStatusService>((serviceProvider, httpClient) =>
+{
+    httpClient.BaseAddress = new Uri("http://localhost:5030/");
 });
 
 var app = builder.Build();
