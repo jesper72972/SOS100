@@ -1,45 +1,47 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using status_formaner_API.Data;
 using status_formaner_API.Models;
 
 namespace status_formaner_API.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class FormanerStatusController : ControllerBase
+public class ServiceStatusController : ControllerBase
 {
-    private static readonly List<FormanerStatus> _statuses = new();
-    private static int _nextId = 1;
+    private readonly AppDbContext _db;
+
+    public ServiceStatusController(AppDbContext db) => _db = db;
 
     [HttpGet]
-    public FormanerStatus[] GetAll() => _statuses.ToArray();
+    public async Task<ServiceStatus[]> GetAll() =>
+        await _db.ServiceStatuses.ToArrayAsync();
 
-    [HttpPost]
-    public IActionResult Create(FormanerStatus newStatus)
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetById(int id)
     {
-        newStatus.ID = _nextId++;
-        _statuses.Add(newStatus);
-        return Ok(newStatus);
+        var status = await _db.ServiceStatuses.FirstOrDefaultAsync(s => s.ID == id);
+        return status == null ? NotFound() : Ok(status);
     }
 
-    [HttpPost("Edit")]
-    public IActionResult Edit(FormanerStatus updatedStatus)
+    [HttpPut("{id}/status")]
+    public async Task<IActionResult> UpdateStatus(int id, [FromBody] string newStatus)
     {
-        var existing = _statuses.FirstOrDefault(s => s.ID == updatedStatus.ID);
-        if (existing == null) return NotFound();
-
-        existing.EmployeeName = updatedStatus.EmployeeName;
-        existing.FormanerTitle = updatedStatus.FormanerTitle;
-        existing.Status = updatedStatus.Status;
-        return Ok(existing);
+        var status = await _db.ServiceStatuses.FirstOrDefaultAsync(s => s.ID == id);
+        if (status == null) return NotFound();
+        status.Status = newStatus;
+        await _db.SaveChangesAsync();
+        return Ok(status);
     }
 
     [HttpDelete("{id}")]
-    public IActionResult Delete(int id)
+    public async Task<IActionResult> Delete(int id)
     {
-        var existing = _statuses.FirstOrDefault(s => s.ID == id);
-        if (existing == null) return NotFound();
-
-        _statuses.Remove(existing);
-        return Ok(existing);
+        var status = await _db.ServiceStatuses.FirstOrDefaultAsync(s => s.ID == id);
+        if (status == null) return NotFound();
+        _db.ServiceStatuses.Remove(status);
+        await _db.SaveChangesAsync();
+        return Ok(status);
     }
 }
+

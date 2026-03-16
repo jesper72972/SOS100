@@ -12,13 +12,13 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 
 builder.Services.AddHttpClient<FormanService>((ServiceProvider, httpClient)  =>
 {
-    httpClient.BaseAddress = new Uri("http://localhost:5028/Formaner");
+    httpClient.BaseAddress = new Uri("http://localhost:5222/");
 });
 
-//builder.Services.AddHttpClient<FormanerStatusService>((serviceProvider, httpClient) =>
-// {
-    // httpClient.BaseAddress = new Uri("http://localhost:5030/");
-// });
+builder.Services.AddHttpClient<FormanerStatusService>((serviceProvider, httpClient) =>
+{
+    httpClient.BaseAddress = new Uri("http://localhost:5030/");
+});
 
 builder.Services.AddSession();
 builder.Services.AddDistributedMemoryCache();
