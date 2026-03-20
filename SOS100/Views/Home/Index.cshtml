@@ -3,14 +3,21 @@
 
 <head>
     <meta charset="utf-8"/>
+    <link rel="stylesheet" href="~/css/Index.css" asp-append-version="true"/>
 </head>
 
 <body>
-<div>  
-    <a asp-controller="Forman" asp-action="Forman">Personal Förmåner</a>
-    <a asp-controller="HR" asp-action="HR">HR</a>
-    <a asp-controller="HOME" asp-action="Index">Admin</a>
-    <a asp-controller="Admin" asp-action="Index">log in</a>
-    <a asp-controller="FormanerStatus" asp-action="FormanerStatus">Status Förmåner</a>
-</div>
+
+<header>Förmånsportal</header>
+
+<nav>
+    <li><a asp-controller="Forman" asp-action="Forman">Personal Förmåner</a></li>
+    <li> <a asp-controller="HR" asp-action="HR">HR</a></li>
+    <li> <a asp-controller="FormanerStatus" asp-action="FormanerStatus">Status Förmåner</a></li>
+</nav>
+
+<img>
+
+<img/>
+
 </body>
