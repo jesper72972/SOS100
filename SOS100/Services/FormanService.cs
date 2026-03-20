@@ -1,5 +1,4 @@
 using SOS100.Models;
-using Microsoft.AspNetCore.Http.Features;
 using System.Net.Http.Json;
 
 namespace SOS100.Services;
@@ -15,13 +14,15 @@ public class FormanService
 
     public async Task<Formaner[]> GetFormans()
     {
-        var result = await _httpClient.GetFromJsonAsync<Formaner[]>("Formaner");
-        if (result == null)
-        { 
-            return result ?? Array.Empty<Formaner>(); 
-        } 
-        
-        return result;
+        try
+        {
+            var result = await _httpClient.GetFromJsonAsync<Formaner[]>("Formaner");
+            return result ?? Array.Empty<Formaner>();
+        }
+        catch (HttpRequestException)
+        {
+            return Array.Empty<Formaner>();
+        }
     }
     
     public async Task CreateForman(Formaner formaner)

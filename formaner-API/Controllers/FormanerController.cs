@@ -1,7 +1,6 @@
 using formaner_API.Data;
 using formaner_API.Models;
 using Microsoft.AspNetCore.Mvc;
-using formaner_API.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace formaner_API.Controllers;
@@ -48,6 +47,8 @@ public class FormanerController : ControllerBase
     public IActionResult Delete(int ID ) 
     {
         var formaner = _dbContext.Formaners.Find(ID);
+        if (formaner == null)
+            return NotFound();
 
         _dbContext.Formaners.Remove(formaner);
         _dbContext.SaveChanges();

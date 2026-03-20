@@ -8,22 +8,1730 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.3"/>
-        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.3" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.3">
-          <PrivateAssets>all</PrivateAssets>
-          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.0"/>
+        <PackageReference Include="Scalar.AspNetCore" Version="2.13.6"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.3"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.3">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.3" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.3">
-          <PrivateAssets>all</PrivateAssets>
-          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-        </PackageReference>
-        <PackageReference Include="Scalar.AspNetCore" Version="2.12.47" />
     </ItemGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\SOS100\SOS100.csproj" />
+    <!-- old linked content removed -->
+    <ItemGroup Condition="false">
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\af\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\af\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\appsettings.Development.json">
+        <Link>bin\Debug\net10.0\appsettings.Development.json</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\appsettings.json">
+        <Link>bin\Debug\net10.0\appsettings.json</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ar\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\ar\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Azure.Core.dll">
+        <Link>bin\Debug\net10.0\Azure.Core.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Azure.Identity.dll">
+        <Link>bin\Debug\net10.0\Azure.Identity.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\az\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\az\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\bg\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\bg\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\bn-BD\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\bn-BD\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-net472\cs\System.CommandLine.resources.dll">
+        <Link>bin\Debug\net10.0\BuildHost-net472\cs\System.CommandLine.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-net472\de\System.CommandLine.resources.dll">
+        <Link>bin\Debug\net10.0\BuildHost-net472\de\System.CommandLine.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-net472\es\System.CommandLine.resources.dll">
+        <Link>bin\Debug\net10.0\BuildHost-net472\es\System.CommandLine.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-net472\fr\System.CommandLine.resources.dll">
+        <Link>bin\Debug\net10.0\BuildHost-net472\fr\System.CommandLine.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-net472\it\System.CommandLine.resources.dll">
+        <Link>bin\Debug\net10.0\BuildHost-net472\it\System.CommandLine.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-net472\ja\System.CommandLine.resources.dll">
+        <Link>bin\Debug\net10.0\BuildHost-net472\ja\System.CommandLine.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-net472\ko\System.CommandLine.resources.dll">
+        <Link>bin\Debug\net10.0\BuildHost-net472\ko\System.CommandLine.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-net472\Microsoft.Build.Locator.dll">
+        <Link>bin\Debug\net10.0\BuildHost-net472\Microsoft.Build.Locator.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-net472\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.exe">
+        <Link>bin\Debug\net10.0\BuildHost-net472\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.exe</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-net472\Microsoft.IO.Redist.dll">
+        <Link>bin\Debug\net10.0\BuildHost-net472\Microsoft.IO.Redist.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-net472\Newtonsoft.Json.dll">
+        <Link>bin\Debug\net10.0\BuildHost-net472\Newtonsoft.Json.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-net472\pl\System.CommandLine.resources.dll">
+        <Link>bin\Debug\net10.0\BuildHost-net472\pl\System.CommandLine.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-net472\pt-BR\System.CommandLine.resources.dll">
+        <Link>bin\Debug\net10.0\BuildHost-net472\pt-BR\System.CommandLine.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-net472\ru\System.CommandLine.resources.dll">
+        <Link>bin\Debug\net10.0\BuildHost-net472\ru\System.CommandLine.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-net472\System.Buffers.dll">
+        <Link>bin\Debug\net10.0\BuildHost-net472\System.Buffers.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-net472\System.Collections.Immutable.dll">
+        <Link>bin\Debug\net10.0\BuildHost-net472\System.Collections.Immutable.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-net472\System.CommandLine.dll">
+        <Link>bin\Debug\net10.0\BuildHost-net472\System.CommandLine.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-net472\System.Memory.dll">
+        <Link>bin\Debug\net10.0\BuildHost-net472\System.Memory.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-net472\System.Numerics.Vectors.dll">
+        <Link>bin\Debug\net10.0\BuildHost-net472\System.Numerics.Vectors.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-net472\System.Runtime.CompilerServices.Unsafe.dll">
+        <Link>bin\Debug\net10.0\BuildHost-net472\System.Runtime.CompilerServices.Unsafe.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-net472\System.Threading.Tasks.Extensions.dll">
+        <Link>bin\Debug\net10.0\BuildHost-net472\System.Threading.Tasks.Extensions.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-net472\tr\System.CommandLine.resources.dll">
+        <Link>bin\Debug\net10.0\BuildHost-net472\tr\System.CommandLine.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-net472\zh-Hans\System.CommandLine.resources.dll">
+        <Link>bin\Debug\net10.0\BuildHost-net472\zh-Hans\System.CommandLine.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-net472\zh-Hant\System.CommandLine.resources.dll">
+        <Link>bin\Debug\net10.0\BuildHost-net472\zh-Hant\System.CommandLine.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-netcore\cs\System.CommandLine.resources.dll">
+        <Link>bin\Debug\net10.0\BuildHost-netcore\cs\System.CommandLine.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-netcore\de\System.CommandLine.resources.dll">
+        <Link>bin\Debug\net10.0\BuildHost-netcore\de\System.CommandLine.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-netcore\es\System.CommandLine.resources.dll">
+        <Link>bin\Debug\net10.0\BuildHost-netcore\es\System.CommandLine.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-netcore\fr\System.CommandLine.resources.dll">
+        <Link>bin\Debug\net10.0\BuildHost-netcore\fr\System.CommandLine.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-netcore\it\System.CommandLine.resources.dll">
+        <Link>bin\Debug\net10.0\BuildHost-netcore\it\System.CommandLine.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-netcore\ja\System.CommandLine.resources.dll">
+        <Link>bin\Debug\net10.0\BuildHost-netcore\ja\System.CommandLine.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-netcore\ko\System.CommandLine.resources.dll">
+        <Link>bin\Debug\net10.0\BuildHost-netcore\ko\System.CommandLine.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-netcore\Microsoft.Build.Locator.dll">
+        <Link>bin\Debug\net10.0\BuildHost-netcore\Microsoft.Build.Locator.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-netcore\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.deps.json">
+        <Link>bin\Debug\net10.0\BuildHost-netcore\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.deps.json</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-netcore\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll">
+        <Link>bin\Debug\net10.0\BuildHost-netcore\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-netcore\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.runtimeconfig.json">
+        <Link>bin\Debug\net10.0\BuildHost-netcore\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.runtimeconfig.json</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-netcore\Newtonsoft.Json.dll">
+        <Link>bin\Debug\net10.0\BuildHost-netcore\Newtonsoft.Json.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-netcore\pl\System.CommandLine.resources.dll">
+        <Link>bin\Debug\net10.0\BuildHost-netcore\pl\System.CommandLine.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-netcore\pt-BR\System.CommandLine.resources.dll">
+        <Link>bin\Debug\net10.0\BuildHost-netcore\pt-BR\System.CommandLine.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-netcore\ru\System.CommandLine.resources.dll">
+        <Link>bin\Debug\net10.0\BuildHost-netcore\ru\System.CommandLine.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-netcore\System.Collections.Immutable.dll">
+        <Link>bin\Debug\net10.0\BuildHost-netcore\System.Collections.Immutable.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-netcore\System.CommandLine.dll">
+        <Link>bin\Debug\net10.0\BuildHost-netcore\System.CommandLine.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-netcore\tr\System.CommandLine.resources.dll">
+        <Link>bin\Debug\net10.0\BuildHost-netcore\tr\System.CommandLine.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-netcore\zh-Hans\System.CommandLine.resources.dll">
+        <Link>bin\Debug\net10.0\BuildHost-netcore\zh-Hans\System.CommandLine.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-netcore\zh-Hant\System.CommandLine.resources.dll">
+        <Link>bin\Debug\net10.0\BuildHost-netcore\zh-Hant\System.CommandLine.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\cs\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\cs\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.Features.resources.dll">
+        <Link>bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll">
+        <Link>bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+        <Link>bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Features.resources.dll">
+        <Link>bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.resources.dll">
+        <Link>bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Scripting.resources.dll">
+        <Link>bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Scripting.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll">
+        <Link>bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll">
+        <Link>bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\cs\Microsoft.Data.SqlClient.resources.dll">
+        <Link>bin\Debug\net10.0\cs\Microsoft.Data.SqlClient.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\da\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\da\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\de\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\de\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.Features.resources.dll">
+        <Link>bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll">
+        <Link>bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+        <Link>bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Features.resources.dll">
+        <Link>bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.resources.dll">
+        <Link>bin\Debug\net10.0\de\Microsoft.CodeAnalysis.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Scripting.resources.dll">
+        <Link>bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Scripting.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll">
+        <Link>bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll">
+        <Link>bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\de\Microsoft.Data.SqlClient.resources.dll">
+        <Link>bin\Debug\net10.0\de\Microsoft.Data.SqlClient.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\dotnet-aspnet-codegenerator-design.dll">
+        <Link>bin\Debug\net10.0\dotnet-aspnet-codegenerator-design.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\el\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\el\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\es\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\es\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.Features.resources.dll">
+        <Link>bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll">
+        <Link>bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+        <Link>bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Features.resources.dll">
+        <Link>bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.resources.dll">
+        <Link>bin\Debug\net10.0\es\Microsoft.CodeAnalysis.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Scripting.resources.dll">
+        <Link>bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Scripting.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll">
+        <Link>bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll">
+        <Link>bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\es\Microsoft.Data.SqlClient.resources.dll">
+        <Link>bin\Debug\net10.0\es\Microsoft.Data.SqlClient.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\fa\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\fa\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\fi-FI\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\fi-FI\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\formaner-API">
+        <Link>bin\Debug\net10.0\formaner-API</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\formaner-API.deps.json">
+        <Link>bin\Debug\net10.0\formaner-API.deps.json</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\formaner-API.dll">
+        <Link>bin\Debug\net10.0\formaner-API.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\formaner-API.pdb">
+        <Link>bin\Debug\net10.0\formaner-API.pdb</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\formaner-API.runtimeconfig.json">
+        <Link>bin\Debug\net10.0\formaner-API.runtimeconfig.json</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\formaner-API.staticwebassets.endpoints.json">
+        <Link>bin\Debug\net10.0\formaner-API.staticwebassets.endpoints.json</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\formaner-API.staticwebassets.runtime.json">
+        <Link>bin\Debug\net10.0\formaner-API.staticwebassets.runtime.json</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\fr-BE\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\fr-BE\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\fr\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\fr\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll">
+        <Link>bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll">
+        <Link>bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+        <Link>bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Features.resources.dll">
+        <Link>bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.resources.dll">
+        <Link>bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Scripting.resources.dll">
+        <Link>bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Scripting.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll">
+        <Link>bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll">
+        <Link>bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\fr\Microsoft.Data.SqlClient.resources.dll">
+        <Link>bin\Debug\net10.0\fr\Microsoft.Data.SqlClient.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\he\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\he\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\hr\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\hr\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Humanizer.dll">
+        <Link>bin\Debug\net10.0\Humanizer.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\hu\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\hu\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\hy\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\hy\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\id\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\id\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\is\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\is\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\it\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\it\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.Features.resources.dll">
+        <Link>bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll">
+        <Link>bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+        <Link>bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Features.resources.dll">
+        <Link>bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.resources.dll">
+        <Link>bin\Debug\net10.0\it\Microsoft.CodeAnalysis.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Scripting.resources.dll">
+        <Link>bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Scripting.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll">
+        <Link>bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll">
+        <Link>bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\it\Microsoft.Data.SqlClient.resources.dll">
+        <Link>bin\Debug\net10.0\it\Microsoft.Data.SqlClient.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ja\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\ja\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.Features.resources.dll">
+        <Link>bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll">
+        <Link>bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+        <Link>bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Features.resources.dll">
+        <Link>bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.resources.dll">
+        <Link>bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Scripting.resources.dll">
+        <Link>bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Scripting.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll">
+        <Link>bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll">
+        <Link>bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ja\Microsoft.Data.SqlClient.resources.dll">
+        <Link>bin\Debug\net10.0\ja\Microsoft.Data.SqlClient.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ko-KR\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\ko-KR\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.Features.resources.dll">
+        <Link>bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll">
+        <Link>bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+        <Link>bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Features.resources.dll">
+        <Link>bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.resources.dll">
+        <Link>bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Scripting.resources.dll">
+        <Link>bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Scripting.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll">
+        <Link>bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll">
+        <Link>bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ko\Microsoft.Data.SqlClient.resources.dll">
+        <Link>bin\Debug\net10.0\ko\Microsoft.Data.SqlClient.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ku\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\ku\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\lv\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\lv\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll">
+        <Link>bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.AspNetCore.Razor.Language.dll">
+        <Link>bin\Debug\net10.0\Microsoft.AspNetCore.Razor.Language.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.Bcl.AsyncInterfaces.dll">
+        <Link>bin\Debug\net10.0\Microsoft.Bcl.AsyncInterfaces.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll">
+        <Link>bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.Build.dll">
+        <Link>bin\Debug\net10.0\Microsoft.Build.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.Build.Framework.dll">
+        <Link>bin\Debug\net10.0\Microsoft.Build.Framework.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.dll">
+        <Link>bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.Features.dll">
+        <Link>bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.Features.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll">
+        <Link>bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.CodeAnalysis.dll">
+        <Link>bin\Debug\net10.0\Microsoft.CodeAnalysis.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.CodeAnalysis.Elfie.dll">
+        <Link>bin\Debug\net10.0\Microsoft.CodeAnalysis.Elfie.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll">
+        <Link>bin\Debug\net10.0\Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.CodeAnalysis.Features.dll">
+        <Link>bin\Debug\net10.0\Microsoft.CodeAnalysis.Features.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.CodeAnalysis.Razor.dll">
+        <Link>bin\Debug\net10.0\Microsoft.CodeAnalysis.Razor.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.CodeAnalysis.Scripting.dll">
+        <Link>bin\Debug\net10.0\Microsoft.CodeAnalysis.Scripting.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.dll">
+        <Link>bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll">
+        <Link>bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.Data.SqlClient.dll">
+        <Link>bin\Debug\net10.0\Microsoft.Data.SqlClient.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.Data.Sqlite.dll">
+        <Link>bin\Debug\net10.0\Microsoft.Data.Sqlite.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.DiaSymReader.dll">
+        <Link>bin\Debug\net10.0\Microsoft.DiaSymReader.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.DotNet.Scaffolding.Shared.dll">
+        <Link>bin\Debug\net10.0\Microsoft.DotNet.Scaffolding.Shared.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll">
+        <Link>bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Design.dll">
+        <Link>bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Design.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll">
+        <Link>bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll">
+        <Link>bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Sqlite.dll">
+        <Link>bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Sqlite.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.SqlServer.dll">
+        <Link>bin\Debug\net10.0\Microsoft.EntityFrameworkCore.SqlServer.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll">
+        <Link>bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.Identity.Client.dll">
+        <Link>bin\Debug\net10.0\Microsoft.Identity.Client.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.Identity.Client.Extensions.Msal.dll">
+        <Link>bin\Debug\net10.0\Microsoft.Identity.Client.Extensions.Msal.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll">
+        <Link>bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll">
+        <Link>bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll">
+        <Link>bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.dll">
+        <Link>bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll">
+        <Link>bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll">
+        <Link>bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.NET.StringTools.dll">
+        <Link>bin\Debug\net10.0\Microsoft.NET.StringTools.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.OpenApi.dll">
+        <Link>bin\Debug\net10.0\Microsoft.OpenApi.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.SqlServer.Server.dll">
+        <Link>bin\Debug\net10.0\Microsoft.SqlServer.Server.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.VisualStudio.SolutionPersistence.dll">
+        <Link>bin\Debug\net10.0\Microsoft.VisualStudio.SolutionPersistence.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll">
+        <Link>bin\Debug\net10.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.VisualStudio.Web.CodeGeneration.dll">
+        <Link>bin\Debug\net10.0\Microsoft.VisualStudio.Web.CodeGeneration.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll">
+        <Link>bin\Debug\net10.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll">
+        <Link>bin\Debug\net10.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll">
+        <Link>bin\Debug\net10.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll">
+        <Link>bin\Debug\net10.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Mono.TextTemplating.dll">
+        <Link>bin\Debug\net10.0\Mono.TextTemplating.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ms-MY\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\ms-MY\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\mt\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\mt\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\nb-NO\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\nb-NO\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\nb\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\nb\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Newtonsoft.Json.dll">
+        <Link>bin\Debug\net10.0\Newtonsoft.Json.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\nl\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\nl\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\NuGet.Common.dll">
+        <Link>bin\Debug\net10.0\NuGet.Common.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\NuGet.Configuration.dll">
+        <Link>bin\Debug\net10.0\NuGet.Configuration.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\NuGet.DependencyResolver.Core.dll">
+        <Link>bin\Debug\net10.0\NuGet.DependencyResolver.Core.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\NuGet.Frameworks.dll">
+        <Link>bin\Debug\net10.0\NuGet.Frameworks.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\NuGet.LibraryModel.dll">
+        <Link>bin\Debug\net10.0\NuGet.LibraryModel.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\NuGet.Packaging.dll">
+        <Link>bin\Debug\net10.0\NuGet.Packaging.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\NuGet.ProjectModel.dll">
+        <Link>bin\Debug\net10.0\NuGet.ProjectModel.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\NuGet.Protocol.dll">
+        <Link>bin\Debug\net10.0\NuGet.Protocol.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\NuGet.Versioning.dll">
+        <Link>bin\Debug\net10.0\NuGet.Versioning.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\pl\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\pl\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.Features.resources.dll">
+        <Link>bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll">
+        <Link>bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+        <Link>bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Features.resources.dll">
+        <Link>bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.resources.dll">
+        <Link>bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Scripting.resources.dll">
+        <Link>bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Scripting.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll">
+        <Link>bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll">
+        <Link>bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\pl\Microsoft.Data.SqlClient.resources.dll">
+        <Link>bin\Debug\net10.0\pl\Microsoft.Data.SqlClient.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Features.resources.dll">
+        <Link>bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll">
+        <Link>bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+        <Link>bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Features.resources.dll">
+        <Link>bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.resources.dll">
+        <Link>bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Scripting.resources.dll">
+        <Link>bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Scripting.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll">
+        <Link>bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll">
+        <Link>bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\pt-BR\Microsoft.Data.SqlClient.resources.dll">
+        <Link>bin\Debug\net10.0\pt-BR\Microsoft.Data.SqlClient.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\pt\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\pt\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ro\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\ro\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\runtimes\browser-wasm\nativeassets\net9.0\e_sqlite3.a">
+        <Link>bin\Debug\net10.0\runtimes\browser-wasm\nativeassets\net9.0\e_sqlite3.a</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\runtimes\linux-arm64\native\libe_sqlite3.so">
+        <Link>bin\Debug\net10.0\runtimes\linux-arm64\native\libe_sqlite3.so</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\runtimes\linux-armel\native\libe_sqlite3.so">
+        <Link>bin\Debug\net10.0\runtimes\linux-armel\native\libe_sqlite3.so</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\runtimes\linux-arm\native\libe_sqlite3.so">
+        <Link>bin\Debug\net10.0\runtimes\linux-arm\native\libe_sqlite3.so</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\runtimes\linux-mips64\native\libe_sqlite3.so">
+        <Link>bin\Debug\net10.0\runtimes\linux-mips64\native\libe_sqlite3.so</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\runtimes\linux-musl-arm64\native\libe_sqlite3.so">
+        <Link>bin\Debug\net10.0\runtimes\linux-musl-arm64\native\libe_sqlite3.so</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\runtimes\linux-musl-arm\native\libe_sqlite3.so">
+        <Link>bin\Debug\net10.0\runtimes\linux-musl-arm\native\libe_sqlite3.so</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\runtimes\linux-musl-riscv64\native\libe_sqlite3.so">
+        <Link>bin\Debug\net10.0\runtimes\linux-musl-riscv64\native\libe_sqlite3.so</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\runtimes\linux-musl-s390x\native\libe_sqlite3.so">
+        <Link>bin\Debug\net10.0\runtimes\linux-musl-s390x\native\libe_sqlite3.so</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\runtimes\linux-musl-x64\native\libe_sqlite3.so">
+        <Link>bin\Debug\net10.0\runtimes\linux-musl-x64\native\libe_sqlite3.so</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\runtimes\linux-ppc64le\native\libe_sqlite3.so">
+        <Link>bin\Debug\net10.0\runtimes\linux-ppc64le\native\libe_sqlite3.so</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\runtimes\linux-riscv64\native\libe_sqlite3.so">
+        <Link>bin\Debug\net10.0\runtimes\linux-riscv64\native\libe_sqlite3.so</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\runtimes\linux-s390x\native\libe_sqlite3.so">
+        <Link>bin\Debug\net10.0\runtimes\linux-s390x\native\libe_sqlite3.so</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\runtimes\linux-x64\native\libe_sqlite3.so">
+        <Link>bin\Debug\net10.0\runtimes\linux-x64\native\libe_sqlite3.so</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\runtimes\linux-x86\native\libe_sqlite3.so">
+        <Link>bin\Debug\net10.0\runtimes\linux-x86\native\libe_sqlite3.so</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\runtimes\maccatalyst-arm64\native\libe_sqlite3.dylib">
+        <Link>bin\Debug\net10.0\runtimes\maccatalyst-arm64\native\libe_sqlite3.dylib</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\runtimes\maccatalyst-x64\native\libe_sqlite3.dylib">
+        <Link>bin\Debug\net10.0\runtimes\maccatalyst-x64\native\libe_sqlite3.dylib</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\runtimes\osx-arm64\native\libe_sqlite3.dylib">
+        <Link>bin\Debug\net10.0\runtimes\osx-arm64\native\libe_sqlite3.dylib</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\runtimes\osx-x64\native\libe_sqlite3.dylib">
+        <Link>bin\Debug\net10.0\runtimes\osx-x64\native\libe_sqlite3.dylib</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\runtimes\unix\lib\net9.0\Microsoft.Data.SqlClient.dll">
+        <Link>bin\Debug\net10.0\runtimes\unix\lib\net9.0\Microsoft.Data.SqlClient.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\runtimes\win-arm64\native\e_sqlite3.dll">
+        <Link>bin\Debug\net10.0\runtimes\win-arm64\native\e_sqlite3.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll">
+        <Link>bin\Debug\net10.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\runtimes\win-arm\native\e_sqlite3.dll">
+        <Link>bin\Debug\net10.0\runtimes\win-arm\native\e_sqlite3.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\runtimes\win-x64\native\e_sqlite3.dll">
+        <Link>bin\Debug\net10.0\runtimes\win-x64\native\e_sqlite3.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll">
+        <Link>bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\runtimes\win-x86\native\e_sqlite3.dll">
+        <Link>bin\Debug\net10.0\runtimes\win-x86\native\e_sqlite3.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll">
+        <Link>bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll">
+        <Link>bin\Debug\net10.0\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ru\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\ru\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.Features.resources.dll">
+        <Link>bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll">
+        <Link>bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+        <Link>bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Features.resources.dll">
+        <Link>bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.resources.dll">
+        <Link>bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Scripting.resources.dll">
+        <Link>bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Scripting.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll">
+        <Link>bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll">
+        <Link>bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\ru\Microsoft.Data.SqlClient.resources.dll">
+        <Link>bin\Debug\net10.0\ru\Microsoft.Data.SqlClient.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\Scalar.AspNetCore.dll">
+        <Link>bin\Debug\net10.0\Scalar.AspNetCore.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\sk\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\sk\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\sl\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\sl\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\SOS100">
+        <Link>bin\Debug\net10.0\SOS100</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\SOS100.deps.json">
+        <Link>bin\Debug\net10.0\SOS100.deps.json</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\SOS100.dll">
+        <Link>bin\Debug\net10.0\SOS100.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\SOS100.pdb">
+        <Link>bin\Debug\net10.0\SOS100.pdb</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\SOS100.runtimeconfig.json">
+        <Link>bin\Debug\net10.0\SOS100.runtimeconfig.json</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\SOS100.staticwebassets.endpoints.json">
+        <Link>bin\Debug\net10.0\SOS100.staticwebassets.endpoints.json</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\SOS100.staticwebassets.runtime.json">
+        <Link>bin\Debug\net10.0\SOS100.staticwebassets.runtime.json</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\SQLitePCLRaw.batteries_v2.dll">
+        <Link>bin\Debug\net10.0\SQLitePCLRaw.batteries_v2.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\SQLitePCLRaw.core.dll">
+        <Link>bin\Debug\net10.0\SQLitePCLRaw.core.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\SQLitePCLRaw.provider.e_sqlite3.dll">
+        <Link>bin\Debug\net10.0\SQLitePCLRaw.provider.e_sqlite3.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\sr-Latn\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\sr-Latn\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\sr\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\sr\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\sv\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\sv\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\System.ClientModel.dll">
+        <Link>bin\Debug\net10.0\System.ClientModel.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\System.CodeDom.dll">
+        <Link>bin\Debug\net10.0\System.CodeDom.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\System.Composition.AttributedModel.dll">
+        <Link>bin\Debug\net10.0\System.Composition.AttributedModel.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\System.Composition.Convention.dll">
+        <Link>bin\Debug\net10.0\System.Composition.Convention.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\System.Composition.Hosting.dll">
+        <Link>bin\Debug\net10.0\System.Composition.Hosting.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\System.Composition.Runtime.dll">
+        <Link>bin\Debug\net10.0\System.Composition.Runtime.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\System.Composition.TypedParts.dll">
+        <Link>bin\Debug\net10.0\System.Composition.TypedParts.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\System.Configuration.ConfigurationManager.dll">
+        <Link>bin\Debug\net10.0\System.Configuration.ConfigurationManager.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll">
+        <Link>bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\System.Memory.Data.dll">
+        <Link>bin\Debug\net10.0\System.Memory.Data.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\System.Reflection.MetadataLoadContext.dll">
+        <Link>bin\Debug\net10.0\System.Reflection.MetadataLoadContext.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\System.Security.Cryptography.ProtectedData.dll">
+        <Link>bin\Debug\net10.0\System.Security.Cryptography.ProtectedData.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\th-TH\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\th-TH\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\tr\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\tr\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll">
+        <Link>bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll">
+        <Link>bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+        <Link>bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Features.resources.dll">
+        <Link>bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.resources.dll">
+        <Link>bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll">
+        <Link>bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll">
+        <Link>bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll">
+        <Link>bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\tr\Microsoft.Data.SqlClient.resources.dll">
+        <Link>bin\Debug\net10.0\tr\Microsoft.Data.SqlClient.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\uk\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\uk\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\uz-Cyrl-UZ\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\uz-Cyrl-UZ\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\uz-Latn-UZ\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\uz-Latn-UZ\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\vi\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\vi\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\zh-CN\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\zh-CN\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\zh-Hans\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\zh-Hans\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Features.resources.dll">
+        <Link>bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll">
+        <Link>bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+        <Link>bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Features.resources.dll">
+        <Link>bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll">
+        <Link>bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll">
+        <Link>bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll">
+        <Link>bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll">
+        <Link>bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\zh-Hans\Microsoft.Data.SqlClient.resources.dll">
+        <Link>bin\Debug\net10.0\zh-Hans\Microsoft.Data.SqlClient.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\zh-Hant\Humanizer.resources.dll">
+        <Link>bin\Debug\net10.0\zh-Hant\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Features.resources.dll">
+        <Link>bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll">
+        <Link>bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+        <Link>bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Features.resources.dll">
+        <Link>bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll">
+        <Link>bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll">
+        <Link>bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll">
+        <Link>bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll">
+        <Link>bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\zh-Hant\Microsoft.Data.SqlClient.resources.dll">
+        <Link>bin\Debug\net10.0\zh-Hant\Microsoft.Data.SqlClient.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\formaner-API.csproj">
+        <Link>formaner-API.csproj</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\.nupkg.metadata">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\.nupkg.metadata</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\.signature.p7s">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\.signature.p7s</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator.10.0.2.nupkg">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator.10.0.2.nupkg</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator.10.0.2.nupkg.sha512">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator.10.0.2.nupkg.sha512</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator.nupkg">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator.nupkg</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator.nuspec">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator.nuspec</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\Icon.png">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\Icon.png</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\NOTICE.txt">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\NOTICE.txt</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\README.md">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\README.md</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\af\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\af\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ar\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ar\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\az\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\az\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\bg\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\bg\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\bn-BD\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\bn-BD\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\buildMultiTargeting\microsoft.visualstudio.web.codegeneration.tools.targets">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\buildMultiTargeting\microsoft.visualstudio.web.codegeneration.tools.targets</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\build\microsoft.visualstudio.web.codegeneration.tools.targets">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\build\microsoft.visualstudio.web.codegeneration.tools.targets</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\cs\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\cs\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\cs\Microsoft.CodeAnalysis.CSharp.Features.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\cs\Microsoft.CodeAnalysis.CSharp.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\cs\Microsoft.CodeAnalysis.CSharp.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\cs\Microsoft.CodeAnalysis.CSharp.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\cs\Microsoft.CodeAnalysis.Features.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\cs\Microsoft.CodeAnalysis.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\cs\Microsoft.CodeAnalysis.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\cs\Microsoft.CodeAnalysis.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\cs\Microsoft.CodeAnalysis.Scripting.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\cs\Microsoft.CodeAnalysis.Scripting.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\da\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\da\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\de\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\de\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\de\Microsoft.CodeAnalysis.CSharp.Features.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\de\Microsoft.CodeAnalysis.CSharp.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\de\Microsoft.CodeAnalysis.CSharp.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\de\Microsoft.CodeAnalysis.CSharp.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\de\Microsoft.CodeAnalysis.Features.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\de\Microsoft.CodeAnalysis.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\de\Microsoft.CodeAnalysis.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\de\Microsoft.CodeAnalysis.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\de\Microsoft.CodeAnalysis.Scripting.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\de\Microsoft.CodeAnalysis.Scripting.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\de\Microsoft.CodeAnalysis.Workspaces.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\de\Microsoft.CodeAnalysis.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\dotnet-aspnet-codegenerator.deps.json">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\dotnet-aspnet-codegenerator.deps.json</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\dotnet-aspnet-codegenerator.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\dotnet-aspnet-codegenerator.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\dotnet-aspnet-codegenerator.pdb">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\dotnet-aspnet-codegenerator.pdb</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\dotnet-aspnet-codegenerator.runtimeconfig.json">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\dotnet-aspnet-codegenerator.runtimeconfig.json</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\dotnet-aspnet-codegenerator.xml">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\dotnet-aspnet-codegenerator.xml</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\DotnetToolSettings.xml">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\DotnetToolSettings.xml</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\el\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\el\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\es\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\es\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\es\Microsoft.CodeAnalysis.CSharp.Features.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\es\Microsoft.CodeAnalysis.CSharp.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\es\Microsoft.CodeAnalysis.CSharp.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\es\Microsoft.CodeAnalysis.CSharp.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\es\Microsoft.CodeAnalysis.Features.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\es\Microsoft.CodeAnalysis.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\es\Microsoft.CodeAnalysis.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\es\Microsoft.CodeAnalysis.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\es\Microsoft.CodeAnalysis.Scripting.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\es\Microsoft.CodeAnalysis.Scripting.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\es\Microsoft.CodeAnalysis.Workspaces.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\es\Microsoft.CodeAnalysis.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\fa\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\fa\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\fi-FI\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\fi-FI\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\fr-BE\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\fr-BE\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\fr\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\fr\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\fr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\fr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\fr\Microsoft.CodeAnalysis.CSharp.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\fr\Microsoft.CodeAnalysis.CSharp.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\fr\Microsoft.CodeAnalysis.Features.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\fr\Microsoft.CodeAnalysis.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\fr\Microsoft.CodeAnalysis.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\fr\Microsoft.CodeAnalysis.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\fr\Microsoft.CodeAnalysis.Scripting.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\fr\Microsoft.CodeAnalysis.Scripting.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\he\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\he\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\hr\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\hr\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Humanizer.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Humanizer.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\hu\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\hu\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\hy\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\hy\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\id\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\id\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\is\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\is\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\it\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\it\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\it\Microsoft.CodeAnalysis.CSharp.Features.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\it\Microsoft.CodeAnalysis.CSharp.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\it\Microsoft.CodeAnalysis.CSharp.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\it\Microsoft.CodeAnalysis.CSharp.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\it\Microsoft.CodeAnalysis.Features.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\it\Microsoft.CodeAnalysis.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\it\Microsoft.CodeAnalysis.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\it\Microsoft.CodeAnalysis.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\it\Microsoft.CodeAnalysis.Scripting.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\it\Microsoft.CodeAnalysis.Scripting.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\it\Microsoft.CodeAnalysis.Workspaces.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\it\Microsoft.CodeAnalysis.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ja\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ja\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ja\Microsoft.CodeAnalysis.CSharp.Features.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ja\Microsoft.CodeAnalysis.CSharp.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ja\Microsoft.CodeAnalysis.CSharp.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ja\Microsoft.CodeAnalysis.CSharp.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ja\Microsoft.CodeAnalysis.Features.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ja\Microsoft.CodeAnalysis.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ja\Microsoft.CodeAnalysis.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ja\Microsoft.CodeAnalysis.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ja\Microsoft.CodeAnalysis.Scripting.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ja\Microsoft.CodeAnalysis.Scripting.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ko-KR\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ko-KR\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ko\Microsoft.CodeAnalysis.CSharp.Features.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ko\Microsoft.CodeAnalysis.CSharp.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ko\Microsoft.CodeAnalysis.CSharp.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ko\Microsoft.CodeAnalysis.CSharp.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ko\Microsoft.CodeAnalysis.Features.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ko\Microsoft.CodeAnalysis.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ko\Microsoft.CodeAnalysis.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ko\Microsoft.CodeAnalysis.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ko\Microsoft.CodeAnalysis.Scripting.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ko\Microsoft.CodeAnalysis.Scripting.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ku\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ku\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\lv\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\lv\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Microsoft.CodeAnalysis.CSharp.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Microsoft.CodeAnalysis.CSharp.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Microsoft.CodeAnalysis.CSharp.Features.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Microsoft.CodeAnalysis.CSharp.Features.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Microsoft.CodeAnalysis.CSharp.Workspaces.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Microsoft.CodeAnalysis.CSharp.Workspaces.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Microsoft.CodeAnalysis.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Microsoft.CodeAnalysis.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Microsoft.CodeAnalysis.Elfie.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Microsoft.CodeAnalysis.Elfie.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Microsoft.CodeAnalysis.Features.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Microsoft.CodeAnalysis.Features.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Microsoft.CodeAnalysis.Scripting.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Microsoft.CodeAnalysis.Scripting.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Microsoft.CodeAnalysis.Workspaces.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Microsoft.CodeAnalysis.Workspaces.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Microsoft.DiaSymReader.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Microsoft.DiaSymReader.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Microsoft.DotNet.Scaffolding.Shared.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Microsoft.DotNet.Scaffolding.Shared.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Microsoft.DotNet.Scaffolding.Shared.pdb">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Microsoft.DotNet.Scaffolding.Shared.pdb</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Microsoft.DotNet.Scaffolding.Shared.xml">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Microsoft.DotNet.Scaffolding.Shared.xml</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Microsoft.Extensions.DependencyModel.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Microsoft.Extensions.DependencyModel.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Mono.TextTemplating.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Mono.TextTemplating.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ms-MY\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ms-MY\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\mt\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\mt\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\nb-NO\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\nb-NO\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\nb\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\nb\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Newtonsoft.Json.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\Newtonsoft.Json.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\nl\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\nl\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\NuGet.Common.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\NuGet.Common.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\NuGet.Configuration.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\NuGet.Configuration.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\NuGet.DependencyResolver.Core.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\NuGet.DependencyResolver.Core.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\NuGet.Frameworks.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\NuGet.Frameworks.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\NuGet.LibraryModel.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\NuGet.LibraryModel.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\NuGet.Packaging.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\NuGet.Packaging.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\NuGet.ProjectModel.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\NuGet.ProjectModel.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\NuGet.Protocol.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\NuGet.Protocol.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\NuGet.Versioning.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\NuGet.Versioning.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pl\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pl\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pl\Microsoft.CodeAnalysis.CSharp.Features.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pl\Microsoft.CodeAnalysis.CSharp.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pl\Microsoft.CodeAnalysis.CSharp.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pl\Microsoft.CodeAnalysis.CSharp.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pl\Microsoft.CodeAnalysis.Features.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pl\Microsoft.CodeAnalysis.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pl\Microsoft.CodeAnalysis.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pl\Microsoft.CodeAnalysis.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pl\Microsoft.CodeAnalysis.Scripting.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pl\Microsoft.CodeAnalysis.Scripting.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pt-BR\Microsoft.CodeAnalysis.CSharp.Features.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pt-BR\Microsoft.CodeAnalysis.CSharp.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pt-BR\Microsoft.CodeAnalysis.Features.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pt-BR\Microsoft.CodeAnalysis.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pt-BR\Microsoft.CodeAnalysis.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pt-BR\Microsoft.CodeAnalysis.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pt-BR\Microsoft.CodeAnalysis.Scripting.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pt-BR\Microsoft.CodeAnalysis.Scripting.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pt\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\pt\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ro\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ro\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\runtimes\win\lib\net9.0\System.Diagnostics.EventLog.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\runtimes\win\lib\net9.0\System.Diagnostics.EventLog.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\runtimes\win\lib\net9.0\System.Diagnostics.EventLog.Messages.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\runtimes\win\lib\net9.0\System.Diagnostics.EventLog.Messages.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ru\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ru\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ru\Microsoft.CodeAnalysis.CSharp.Features.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ru\Microsoft.CodeAnalysis.CSharp.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ru\Microsoft.CodeAnalysis.CSharp.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ru\Microsoft.CodeAnalysis.CSharp.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ru\Microsoft.CodeAnalysis.Features.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ru\Microsoft.CodeAnalysis.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ru\Microsoft.CodeAnalysis.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ru\Microsoft.CodeAnalysis.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ru\Microsoft.CodeAnalysis.Scripting.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ru\Microsoft.CodeAnalysis.Scripting.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\shims\win-x64\dotnet-aspnet-codegenerator.exe">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\shims\win-x64\dotnet-aspnet-codegenerator.exe</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\shims\win-x86\dotnet-aspnet-codegenerator.exe">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\shims\win-x86\dotnet-aspnet-codegenerator.exe</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\sk\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\sk\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\sl\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\sl\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\sr-Latn\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\sr-Latn\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\sr\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\sr\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\sv\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\sv\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\System.CodeDom.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\System.CodeDom.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\System.Composition.AttributedModel.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\System.Composition.AttributedModel.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\System.Composition.Convention.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\System.Composition.Convention.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\System.Composition.Hosting.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\System.Composition.Hosting.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\System.Composition.Runtime.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\System.Composition.Runtime.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\System.Composition.TypedParts.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\System.Composition.TypedParts.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\System.Configuration.ConfigurationManager.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\System.Configuration.ConfigurationManager.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\System.Diagnostics.EventLog.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\System.Diagnostics.EventLog.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\System.Security.Cryptography.Pkcs.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\System.Security.Cryptography.Pkcs.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\System.Security.Cryptography.ProtectedData.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\System.Security.Cryptography.ProtectedData.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\th-TH\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\th-TH\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\toolassets\net9.0\Microsoft.VisualStudio.Web.CodeGeneration.Msbuild.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\toolassets\net9.0\Microsoft.VisualStudio.Web.CodeGeneration.Msbuild.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\tr\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\tr\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\tr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\tr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\tr\Microsoft.CodeAnalysis.CSharp.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\tr\Microsoft.CodeAnalysis.CSharp.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\tr\Microsoft.CodeAnalysis.Features.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\tr\Microsoft.CodeAnalysis.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\tr\Microsoft.CodeAnalysis.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\tr\Microsoft.CodeAnalysis.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\tr\Microsoft.CodeAnalysis.Scripting.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\tr\Microsoft.CodeAnalysis.Scripting.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\uk\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\uk\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\uz-Cyrl-UZ\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\uz-Cyrl-UZ\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\uz-Latn-UZ\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\uz-Latn-UZ\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\vi\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\vi\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-CN\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-CN\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hans\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hans\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hans\Microsoft.CodeAnalysis.CSharp.Features.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hans\Microsoft.CodeAnalysis.CSharp.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hans\Microsoft.CodeAnalysis.Features.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hans\Microsoft.CodeAnalysis.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hans\Microsoft.CodeAnalysis.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hans\Microsoft.CodeAnalysis.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hant\Humanizer.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hant\Humanizer.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hant\Microsoft.CodeAnalysis.CSharp.Features.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hant\Microsoft.CodeAnalysis.CSharp.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hant\Microsoft.CodeAnalysis.Features.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hant\Microsoft.CodeAnalysis.Features.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hant\Microsoft.CodeAnalysis.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hant\Microsoft.CodeAnalysis.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\dotnet-aspnet-codegenerator\10.0.2\tools\net10.0\any\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\.store\dotnet-aspnet-codegenerator\10.0.2\project.assets.json">
+        <Link>obj\.store\dotnet-aspnet-codegenerator\10.0.2\project.assets.json</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\Debug\net10.0\apphost">
+        <Link>obj\Debug\net10.0\apphost</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\Debug\net10.0\apphost.exe">
+        <Link>obj\Debug\net10.0\apphost.exe</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\Debug\net10.0\formaner-API.AssemblyInfoInputs.cache">
+        <Link>obj\Debug\net10.0\formaner-API.AssemblyInfoInputs.cache</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\Debug\net10.0\formaner-API.assets.cache">
+        <Link>obj\Debug\net10.0\formaner-API.assets.cache</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\Debug\net10.0\formaner-API.csproj.AssemblyReference.cache">
+        <Link>obj\Debug\net10.0\formaner-API.csproj.AssemblyReference.cache</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\Debug\net10.0\formaner-API.csproj.CoreCompileInputs.cache">
+        <Link>obj\Debug\net10.0\formaner-API.csproj.CoreCompileInputs.cache</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\Debug\net10.0\formaner-API.csproj.FileListAbsolute.txt">
+        <Link>obj\Debug\net10.0\formaner-API.csproj.FileListAbsolute.txt</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\Debug\net10.0\formaner-API.dll">
+        <Link>obj\Debug\net10.0\formaner-API.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\Debug\net10.0\formaner-API.GeneratedMSBuildEditorConfig.editorconfig">
+        <Link>obj\Debug\net10.0\formaner-API.GeneratedMSBuildEditorConfig.editorconfig</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\Debug\net10.0\formaner-API.genruntimeconfig.cache">
+        <Link>obj\Debug\net10.0\formaner-API.genruntimeconfig.cache</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\Debug\net10.0\formaner-API.MvcApplicationPartsAssemblyInfo.cache">
+        <Link>obj\Debug\net10.0\formaner-API.MvcApplicationPartsAssemblyInfo.cache</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\Debug\net10.0\formaner-API.pdb">
+        <Link>obj\Debug\net10.0\formaner-API.pdb</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\Debug\net10.0\formaner-API.sourcelink.json">
+        <Link>obj\Debug\net10.0\formaner-API.sourcelink.json</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\Debug\net10.0\formaner.85EC690D.Up2Date">
+        <Link>obj\Debug\net10.0\formaner.85EC690D.Up2Date</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\Debug\net10.0\refint\formaner-API.dll">
+        <Link>obj\Debug\net10.0\refint\formaner-API.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\Debug\net10.0\ref\formaner-API.dll">
+        <Link>obj\Debug\net10.0\ref\formaner-API.dll</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json">
+        <Link>obj\Debug\net10.0\rjsmcshtml.dswa.cache.json</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\Debug\net10.0\rjsmrazor.dswa.cache.json">
+        <Link>obj\Debug\net10.0\rjsmrazor.dswa.cache.json</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\Debug\net10.0\rpswa.dswa.cache.json">
+        <Link>obj\Debug\net10.0\rpswa.dswa.cache.json</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\Debug\net10.0\staticwebassets.build.endpoints.json">
+        <Link>obj\Debug\net10.0\staticwebassets.build.endpoints.json</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\Debug\net10.0\staticwebassets.build.json">
+        <Link>obj\Debug\net10.0\staticwebassets.build.json</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\Debug\net10.0\staticwebassets.build.json.cache">
+        <Link>obj\Debug\net10.0\staticwebassets.build.json.cache</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\Debug\net10.0\staticwebassets.development.json">
+        <Link>obj\Debug\net10.0\staticwebassets.development.json</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\Debug\net10.0\swae.build.ex.cache">
+        <Link>obj\Debug\net10.0\swae.build.ex.cache</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\dotnet-aspnet-codegenerator">
+        <Link>obj\dotnet-aspnet-codegenerator</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\formaner-API.csproj.codegeneration.targets">
+        <Link>obj\formaner-API.csproj.codegeneration.targets</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\formaner-API.csproj.nuget.dgspec.json">
+        <Link>obj\formaner-API.csproj.nuget.dgspec.json</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\formaner-API.csproj.nuget.g.props">
+        <Link>obj\formaner-API.csproj.nuget.g.props</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\formaner-API.csproj.nuget.g.targets">
+        <Link>obj\formaner-API.csproj.nuget.g.targets</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\project.assets.json">
+        <Link>obj\project.assets.json</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\project.nuget.cache">
+        <Link>obj\project.nuget.cache</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\project.packagespec.json">
+        <Link>obj\project.packagespec.json</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\rider.project.model.nuget.info">
+        <Link>obj\rider.project.model.nuget.info</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\rider.project.restore.info">
+        <Link>obj\rider.project.restore.info</Link>
+      </Content>
+      <Content Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\Properties\launchSettings.json">
+        <Link>Properties\launchSettings.json</Link>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup Condition="false">
+      <None Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\bin\Debug\net10.0\BuildHost-net472\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.exe.config">
+        <Link>bin\Debug\net10.0\BuildHost-net472\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.exe.config</Link>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup Condition="false">
+      <Compile Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\Debug\net10.0\.NETCoreApp,Version=v10.0.AssemblyAttributes.cs">
+        <Link>obj\Debug\net10.0\.NETCoreApp,Version=v10.0.AssemblyAttributes.cs</Link>
+      </Compile>
+      <Compile Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\Debug\net10.0\formaner-API.AssemblyInfo.cs">
+        <Link>obj\Debug\net10.0\formaner-API.AssemblyInfo.cs</Link>
+      </Compile>
+      <Compile Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\Debug\net10.0\formaner-API.GlobalUsings.g.cs">
+        <Link>obj\Debug\net10.0\formaner-API.GlobalUsings.g.cs</Link>
+      </Compile>
+      <Compile Include="..\..\..\..\RiderProjects\sos100-medarbetarsformaner\SOS100\formaner-API\obj\Debug\net10.0\formaner-API.MvcApplicationPartsAssemblyInfo.cs">
+        <Link>obj\Debug\net10.0\formaner-API.MvcApplicationPartsAssemblyInfo.cs</Link>
+      </Compile>
     </ItemGroup>
 
 </Project>

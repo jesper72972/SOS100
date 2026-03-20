@@ -1,0 +1,277 @@
+@using SOS100.Models
+@model FormanerStatusViewModel
+
+@{
+    ViewData["Title"] = "Förmånsstatus";
+}
+
+<h2>Förmånsstatus</h2>
+
+<div class="mb-4">
+    <button class="btn btn-primary me-2" onclick="showPanel('user')">👤 Användare</button>
+    <button class="btn btn-danger" onclick="showPanel('admin')">🔧 Admin</button>
+</div>
+
+<!-- USER PANEL -->
+<div id="user-panel">
+    <h4>Din förmånsstatus</h4>
+
+    <form method="get" asp-action="FormanerStatus" class="d-flex align-items-center gap-2 mb-4" id="name-form">
+        <label class="form-label mb-0 fw-semibold" for="nameSelect">Välj användare:</label>
+        <select id="nameSelect" name="name" class="form-select w-auto" onchange="this.form.submit()">
+            <option value="">-- Alla --</option>
+            @foreach (var n in Model.AvailableNames)
+            {
+                if (Model.SelectedName == n)
+                {
+                    <option value="@n" selected>@n</option>
+                }
+                else
+                {
+                    <option value="@n">@n</option>
+                }
+            }
+        </select>
+        @if (!string.IsNullOrEmpty(Model.SelectedName))
+        {
+            <a asp-action="FormanerStatus" class="btn btn-outline-secondary btn-sm">✕ Rensa</a>
+        }
+    </form>
+
+    @if (!Model.Statuses.Any())
+    {
+        <p class="text-muted">Inga statuser hittades.</p>
+    }
+    @foreach (var status in Model.Statuses)
+    {
+        var comments = Model.Comments.Where(c => c.StatusOBJ == status.ID).ToList();
+        var title = Model.Formaners.FirstOrDefault(f => f.ID == status.ServicID)?.Title ?? "-";
+        var badgeClass = status.Status switch
+        {
+            "Active"   => "bg-success",
+            "Pending"  => "bg-warning text-dark",
+            _          => "bg-secondary"
+        };
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">@status.Name</h5>
+                <p class="text-muted mb-1">Förmån: <strong>@title</strong></p>
+                <span class="badge @badgeClass mb-2">@status.Status</span>
+
+                @foreach (var c in comments)
+                {
+                    if (!string.IsNullOrEmpty(c.AdminComment))
+                    {
+                        <p class="mb-1"><strong>Admin:</strong> @c.AdminComment</p>
+                    }
+                    if (!string.IsNullOrEmpty(c.UserCommemt))
+                    {
+                        <p class="mb-1"><strong>Du:</strong> @c.UserCommemt</p>
+                    }
+                }
+
+                <form asp-action="CreateUserComment" method="post" class="mt-2">
+                    <input type="hidden" name="statusOBJ" value="@status.ID" />
+                    <textarea name="userComment" class="form-control mb-1" rows="2" placeholder="Skriv en kommentar..."></textarea>
+                    <button type="submit" class="btn btn-sm btn-primary">Skicka kommentar</button>
+                </form>
+            </div>
+        </div>
+    }
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="admin-panel" style="display:none;">
+    <h4>Adminvy</h4>
+    @if (!Model.Statuses.Any())
+    {
+        <p class="text-muted">Inga statuser hittades.</p>
+    }
+    @foreach (var status in Model.Statuses)
+    {
+        var comments = Model.Comments.Where(c => c.StatusOBJ == status.ID).ToList();
+        var title = Model.Formaners.FirstOrDefault(f => f.ID == status.ServicID)?.Title ?? "-";
+        var badgeClass = status.Status switch
+        {
+            "Active"   => "bg-success",
+            "Pending"  => "bg-warning text-dark",
+            _          => "bg-secondary"
+        };
+        var selActive   = status.Status == "Active"   ? "selected" : null;
+        var selPending  = status.Status == "Pending"  ? "selected" : null;
+        var selInactive = status.Status == "Inactive" ? "selected" : null;
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">@status.Name</h5>
+                <p class="text-muted mb-1">Förmån: <strong>@title</strong></p>
+                <span class="badge @badgeClass mb-2">@status.Status</span>
+
+                @foreach (var c in comments)
+                {
+                    if (!string.IsNullOrEmpty(c.AdminComment))
+                    {
+                        <p class="mb-1"><strong>Admin:</strong> @c.AdminComment</p>
+                    }
+                    if (!string.IsNullOrEmpty(c.UserCommemt))
+                    {
+                        <p class="mb-1"><strong>Användare:</strong> @c.UserCommemt</p>
+                    }
+                }
+
+                <div class="d-flex flex-wrap gap-2 mt-2">
+                    <!-- Update status -->
+                    <form asp-action="UpdateStatus" method="post" class="d-flex align-items-center gap-1">
+                        <input type="hidden" name="id" value="@status.ID" />
+                        <select name="status" class="form-select form-select-sm" style="width:auto;">
+                            <option value="Active"   selected="@selActive">Active</option>
+                            <option value="Pending"  selected="@selPending">Pending</option>
+                            <option value="Inactive" selected="@selInactive">Inactive</option>
+                        </select>
+                        <button type="submit" class="btn btn-sm btn-warning">Uppdatera</button>
+                    </form>
+
+                    <!-- Delete -->
+                    <form asp-action="DeleteStatus" method="post">
+                        <input type="hidden" name="id" value="@status.ID" />
+                        <button type="submit" class="btn btn-sm btn-danger"
+                                onclick="return confirm('Ta bort @status.Name?')">Ta bort</button>
+                    </form>
+                </div>
+
+                <!-- Admin comment -->
+                <form asp-action="CreateAdminComment" method="post" class="mt-2">
+                    <input type="hidden" name="statusOBJ" value="@status.ID" />
+                    <textarea name="adminComment" class="form-control mb-1" rows="2" placeholder="Skriv en adminkommentar..."></textarea>
+                    <button type="submit" class="btn btn-sm btn-info">Lägg till kommentar</button>
+                </form>
+            </div>
+        </div>
+    }
+</div>
+
+<div id="user-panel" style="display:none;">
+    <h4>Din förmånsstatus</h4>
+    @if (!Model.Statuses.Any())
+    {
+        <p class="text-muted">Inga statuser hittades.</p>
+    }
+    @foreach (var status in Model.Statuses)
+    {
+        var comments = Model.Comments.Where(c => c.StatusOBJ == status.ID).ToList();
+        var badgeClass = status.Status switch
+        {
+            "Active"   => "bg-success",
+            "Pending"  => "bg-warning text-dark",
+            _          => "bg-secondary"
+        };
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">@status.Name</h5>
+                <span class="badge @badgeClass mb-2">@status.Status</span>
+
+                @foreach (var c in comments)
+                {
+                    if (!string.IsNullOrEmpty(c.AdminComment))
+                    {
+                        <p class="mb-1"><strong>Admin:</strong> @c.AdminComment</p>
+                    }
+                    if (!string.IsNullOrEmpty(c.UserCommemt))
+                    {
+                        <p class="mb-1"><strong>Du:</strong> @c.UserCommemt</p>
+                    }
+                }
+
+                <form asp-action="CreateUserComment" method="post" class="mt-2">
+                    <input type="hidden" name="statusOBJ" value="@status.ID" />
+                    <textarea name="userComment" class="form-control mb-1" rows="2" placeholder="Skriv en kommentar..."></textarea>
+                    <button type="submit" class="btn btn-sm btn-primary">Skicka kommentar</button>
+                </form>
+            </div>
+        </div>
+    }
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="admin-panel" style="display:none;">
+    <h4>Adminvy</h4>
+    @if (!Model.Statuses.Any())
+    {
+        <p class="text-muted">Inga statuser hittades.</p>
+    }
+    @foreach (var status in Model.Statuses)
+    {
+        var comments = Model.Comments.Where(c => c.StatusOBJ == status.ID).ToList();
+        var title = Model.Formaners.FirstOrDefault(f => f.ID == status.ServicID)?.Title ?? "-";
+        var badgeClass = status.Status switch
+        {
+            "Active"   => "bg-success",
+            "Pending"  => "bg-warning text-dark",
+            _          => "bg-secondary"
+        };
+        var selActive   = status.Status == "Active"   ? "selected" : null;
+        var selPending  = status.Status == "Pending"  ? "selected" : null;
+        var selInactive = status.Status == "Inactive" ? "selected" : null;
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">@status.Name</h5>
+                <p class="text-muted mb-1">Förmån: <strong>@title</strong></p>
+                <span class="badge @badgeClass mb-2">@status.Status</span>
+
+                @foreach (var c in comments)
+                {
+                    if (!string.IsNullOrEmpty(c.AdminComment))
+                    {
+                        <p class="mb-1"><strong>Admin:</strong> @c.AdminComment</p>
+                    }
+                    if (!string.IsNullOrEmpty(c.UserCommemt))
+                    {
+                        <p class="mb-1"><strong>Användare:</strong> @c.UserCommemt</p>
+                    }
+                }
+
+                <div class="d-flex flex-wrap gap-2 mt-2">
+                    <!-- Update status -->
+                    <form asp-action="UpdateStatus" method="post" class="d-flex align-items-center gap-1">
+                        <input type="hidden" name="id" value="@status.ID" />
+                        <select name="status" class="form-select form-select-sm" style="width:auto;">
+                            <option value="Active"   selected="@selActive">Active</option>
+                            <option value="Pending"  selected="@selPending">Pending</option>
+                            <option value="Inactive" selected="@selInactive">Inactive</option>
+                        </select>
+                        <button type="submit" class="btn btn-sm btn-warning">Uppdatera</button>
+                    </form>
+
+                    <!-- Delete -->
+                    <form asp-action="DeleteStatus" method="post">
+                        <input type="hidden" name="id" value="@status.ID" />
+                        <button type="submit" class="btn btn-sm btn-danger"
+                                onclick="return confirm('Ta bort @status.Name?')">Ta bort</button>
+                    </form>
+                </div>
+
+                <!-- Admin comment -->
+                <form asp-action="CreateAdminComment" method="post" class="mt-2">
+                    <input type="hidden" name="statusOBJ" value="@status.ID" />
+                    <textarea name="adminComment" class="form-control mb-1" rows="2" placeholder="Skriv en adminkommentar..."></textarea>
+                    <button type="submit" class="btn btn-sm btn-info">Lägg till kommentar</button>
+                </form>
+            </div>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        function showPanel(type) {
+            document.getElementById('user-panel').style.display = 'none';
+            document.getElementById('admin-panel').style.display = 'none';
+            document.getElementById(type + '-panel').style.display = 'block';
+        }
+
+        // Auto-open user panel if a name filter is active
+        @if (!string.IsNullOrEmpty(Model.SelectedName))
+        {
+            <text>document.addEventListener('DOMContentLoaded', () => showPanel('user'));</text>
+        }
+    </script>
+}
