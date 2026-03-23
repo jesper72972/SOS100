@@ -49,10 +49,21 @@ public class ApprovalsController : ControllerBase
     {
         if (id != approval.Id)
         {
-            return BadRequest();
+            return BadRequest("Id in URL does not match body.");
         }
 
-        _context.Entry(approval).State = EntityState.Modified;
+        var existingApproval = await _context.Approvals.FindAsync(id);
+        if (existingApproval == null)
+        {
+            return NotFound();
+        }
+
+        existingApproval.ApplicationId = approval.ApplicationId;
+        existingApproval.ApproverId = approval.ApproverId;
+        existingApproval.Decision = approval.Decision;
+        existingApproval.Comment = approval.Comment;
+        existingApproval.DecisionDate = approval.DecisionDate;
+
         await _context.SaveChangesAsync();
 
         return NoContent();
