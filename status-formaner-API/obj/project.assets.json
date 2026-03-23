@@ -2365,19 +2365,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\axell\\.nuget\\packages\\": {}
+    "/Users/jesperlindqvist/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\axell\\Documents\\Rider\\Projects\\status-formaner-API\\status-formaner-API.csproj",
+      "projectUniqueName": "/Users/jesperlindqvist/RiderProjects/SOS100/status-formaner-API/status-formaner-API.csproj",
       "projectName": "status-formaner-API",
-      "projectPath": "C:\\Users\\axell\\Documents\\Rider\\Projects\\status-formaner-API\\status-formaner-API.csproj",
-      "packagesPath": "C:\\Users\\axell\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\axell\\Documents\\Rider\\Projects\\status-formaner-API\\obj\\",
+      "projectPath": "/Users/jesperlindqvist/RiderProjects/SOS100/status-formaner-API/status-formaner-API.csproj",
+      "packagesPath": "/Users/jesperlindqvist/.nuget/packages/",
+      "outputPath": "/Users/jesperlindqvist/RiderProjects/SOS100/status-formaner-API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\axell\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/jesperlindqvist/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
@@ -2445,7 +2445,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.103/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

@@ -30,12 +30,12 @@ public class FormanerStatusController : Controller
             Comments       = await _statusService.GetComments(),
             Formaners      = await _formanService.GetFormans(),
             SelectedName   = name,
-            AvailableNames = availableNames
+            AvailableNames = availableNames, 
         };
         return View(vm);
     }
-
-    [HttpPost]
+    
+       [HttpPost]
     public async Task<IActionResult> CreateUserComment(int statusOBJ, string userComment)
     {
         await _statusService.CreateComment(new Comment { StatusOBJ = statusOBJ, UserCommemt = userComment });

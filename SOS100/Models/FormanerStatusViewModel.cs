@@ -6,5 +6,8 @@ public class FormanerStatusViewModel
     public Comment[] Comments { get; set; } = Array.Empty<Comment>();
     public Formaner[] Formaners { get; set; } = Array.Empty<Formaner>();
     public string? SelectedName { get; set; }
+    
     public IEnumerable<string> AvailableNames { get; set; } = Enumerable.Empty<string>();
+    
+
 }

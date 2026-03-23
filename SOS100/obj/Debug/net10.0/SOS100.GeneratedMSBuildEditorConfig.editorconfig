@@ -19,53 +19,53 @@ build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v10.0
 build_property.RootNamespace = SOS100
 build_property.RootNamespace = SOS100
-build_property.ProjectDir = C:\Users\axell\Documents\Rider\Projects\SOS100\
+build_property.ProjectDir = /Users/jesperlindqvist/RiderProjects/SOS100/SOS100/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\axell\Documents\Rider\Projects\SOS100
+build_property.MSBuildProjectDirectory = /Users/jesperlindqvist/RiderProjects/SOS100/SOS100
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/axell/Documents/Rider/Projects/SOS100/Views/Account/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJbmRleC5jc2h0bWw=
+[/Users/jesperlindqvist/RiderProjects/SOS100/SOS100/Views/Account/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/axell/Documents/Rider/Projects/SOS100/Views/FormanerStatus/FormanerStatus.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybWFuZXJTdGF0dXNcRm9ybWFuZXJTdGF0dXMuY3NodG1s
+[/Users/jesperlindqvist/RiderProjects/SOS100/SOS100/Views/Forman/Forman.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRm9ybWFuL0Zvcm1hbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/axell/Documents/Rider/Projects/SOS100/Views/Forman/Forman.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybWFuXEZvcm1hbi5jc2h0bWw=
+[/Users/jesperlindqvist/RiderProjects/SOS100/SOS100/Views/FormanerStatus/FormanerStatus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRm9ybWFuZXJTdGF0dXMvRm9ybWFuZXJTdGF0dXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/axell/Documents/Rider/Projects/SOS100/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[/Users/jesperlindqvist/RiderProjects/SOS100/SOS100/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/axell/Documents/Rider/Projects/SOS100/Views/HR/HR.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJcSFIuY3NodG1s
+[/Users/jesperlindqvist/RiderProjects/SOS100/SOS100/Views/HR/HR.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSFIvSFIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/axell/Documents/Rider/Projects/SOS100/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+[/Users/jesperlindqvist/RiderProjects/SOS100/SOS100/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/axell/Documents/Rider/Projects/SOS100/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[/Users/jesperlindqvist/RiderProjects/SOS100/SOS100/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/axell/Documents/Rider/Projects/SOS100/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[/Users/jesperlindqvist/RiderProjects/SOS100/SOS100/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/axell/Documents/Rider/Projects/SOS100/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+[/Users/jesperlindqvist/RiderProjects/SOS100/SOS100/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/axell/Documents/Rider/Projects/SOS100/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-wesckt70v7
+[/Users/jesperlindqvist/RiderProjects/SOS100/SOS100/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-wow1vqfrii
