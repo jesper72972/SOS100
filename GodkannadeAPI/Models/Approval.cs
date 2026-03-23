@@ -1,21 +1,25 @@
-﻿namespace GodkannadeAPI.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace GodkannadeAPI.Models;
 
 public class Approval
 {
     public int Id { get; set; }
 
-    // ID på ansökan som godkänns
+    [Required]
+    [Range(1, int.MaxValue)]
     public int ApplicationId { get; set; }
 
-    // ID på personen som godkänner
+    [Required]
+    [Range(1, int.MaxValue)]
     public int ApproverId { get; set; }
 
-    // Approved eller Rejected
+    [Required]
+    [RegularExpression("Approved|Rejected", ErrorMessage = "Decision must be Approved or Rejected")]
     public string Decision { get; set; } = string.Empty;
 
-    // Kommentar från chefen
+    [MaxLength(500)]
     public string Comment { get; set; } = string.Empty;
 
-    // Datum för beslutet
     public DateTime DecisionDate { get; set; } = DateTime.UtcNow;
 }
