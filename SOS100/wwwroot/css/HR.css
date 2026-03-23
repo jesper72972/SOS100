@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+    color: black;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 35px; 
+}
+
+#LoggaUt {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        text-decoration: none;
+
+}
+
+#FormanerIDLänk {
+    text-align: center;
+    text-decoration: none;
+}

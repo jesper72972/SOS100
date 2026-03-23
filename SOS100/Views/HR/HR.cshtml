@@ -1,44 +1,45 @@
 @using SOS100.Models
 @model SOS100.Models.Formaner
 
-<head>
-    <title></title>
-</head>
+
 
 <body>
-<a asp-controller="Account" asp-action="SignOutUser">Log out</a>
-<p>Create a benefit</p>
+<link rel="stylesheet" href="~/css/HR.css"/>
 
-<form   asp-action="Create"> 
-   
+<a id="LoggaUt" asp-controller="Account" asp-action="SignOutUser">Log out</a>
+<a id="FormanerIDLänk" asp-controller="FormanerID" asp-action="FormanerID">Här kan du se alla förmåner med ID!</a>
+<h1>Create a benefit</h1>
+
+<form asp-action="Create">
+
     Titel <br/>
     <input asp-for="Title"/> <br/>
-    Kategorie:  <br/>
+    Kategorie: <br/>
     <input asp-for="categorie"/> <br/>
     Beskrivning: <br/>
     <input asp-for="Description"/> <br/>
-    <input type="submit"   value="Spara"/>
+    <input type="submit" value="Spara"/> <br/><br/>
 </form>
 
-<p>Redigera en personalförmån:</p>
+<h1>Redigera en personalförmån:</h1>
 
-<form asp-action="Edit"> 
+<form asp-action="Edit">
     ID: <br/>
     <input asp-for="ID"/> <br/>
     Titel <br/>
     <input asp-for="Title"/> <br/>
-    Kategorie:  <br/>
+    Kategorie: <br/>
     <input asp-for="categorie"/> <br/>
     Beskrivning: <br/>
     <input asp-for="Description"/> <br/>
-    <input type="submit"  value="Edit"/>
+    <input type="submit" value="Edit"/> <br/><br/>
 </form>
 
-<p>Radera en personalförmån:</p>
+<h1>Radera en personalförmån:</h1>
 
-<form  asp-action="Delete">
+<form asp-action="Delete">
     ID: <br/>
-    <input asp-for="ID"/> <br/> 
+    <input asp-for="ID"/> <br/>
     <input type="submit" value="Delete"/>
 </form>
 

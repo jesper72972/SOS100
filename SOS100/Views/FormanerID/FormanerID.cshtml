@@ -1,0 +1,37 @@
+@using System.ComponentModel
+@using SOS100.Models;
+@model Formaner[]
+
+
+
+<!DOCTYPE html>
+
+<html>
+
+<body>
+<h1>Förmånernas ID:</h1>
+<div>
+    <table >
+        <thead>
+        <tr>
+            <th>ID:</th>
+            <th>Titel     </th>
+            <th>Kategori     </th>
+            <th>Beskrivning     </th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var forman in Model)
+        {
+            <tr>
+                <td>@forman.ID</td>
+                <td>@forman.Title</td>
+                <td>@forman.categorie</td>
+                <td>@forman.Description</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    </div>
+</body>
+</html>
