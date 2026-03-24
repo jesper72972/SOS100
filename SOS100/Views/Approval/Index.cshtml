@@ -1,10 +1,10 @@
 ﻿@model List<SOS100.Models.Approval>
 
-<link rel="stylesheet" href="~/css/approval.css" />
-
 @{
     ViewData["Title"] = "Godkännanden";
 }
+
+<link rel="stylesheet" href="~/css/approval.css" />
 
 <h2>Godkännanden</h2>
 
@@ -43,12 +43,12 @@ else
                 <td>@approval.DecisionDate</td>
                 <td>
                     <form method="post" asp-controller="Approval" asp-action="Approve" style="display:inline;">
-                        <input type="hidden" name="applicationId" value="@approval.ApplicationId" />
+                        <input type="hidden" name="id" value="@approval.Id" />
                         <button type="submit">Godkänn</button>
                     </form>
 
                     <form method="post" asp-controller="Approval" asp-action="Reject" style="display:inline; margin-left:5px;">
-                        <input type="hidden" name="applicationId" value="@approval.ApplicationId" />
+                        <input type="hidden" name="id" value="@approval.Id" />
                         <button type="submit">Neka</button>
                     </form>
                 </td>

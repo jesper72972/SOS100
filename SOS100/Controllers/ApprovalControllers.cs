@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿
+
+using System.Net.Http.Json;
 using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using SOS100.Models;
@@ -36,41 +38,73 @@ public class ApprovalController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Approve(int applicationId)
+    public async Task<IActionResult> Approve(int id)
     {
-        var approval = new Approval
+        var response = await _httpClient.GetAsync($"http://localhost:5130/api/approvals/{id}");
+
+        if (!response.IsSuccessStatusCode)
         {
-            ApplicationId = applicationId,
-            ApproverId = 101,
-            Decision = "Approved",
-            Comment = "Approved via frontend",
-            DecisionDate = DateTime.UtcNow
-        };
+            ViewBag.Error = "Kunde inte hämta godkännandet för uppdatering.";
+            return RedirectToAction("Index");
+        }
 
-        var json = JsonSerializer.Serialize(approval);
-        var content = new StringContent(json, Encoding.UTF8, "application/json");
+        var approval = await response.Content.ReadFromJsonAsync<Approval>();
 
-        await _httpClient.PostAsync("http://localhost:5130/api/approvals", content);
+        if (approval == null)
+        {
+            ViewBag.Error = "Godkännandet kunde inte hittas.";
+            return RedirectToAction("Index");
+        }
+
+        approval.Decision = "Approved";
+        approval.Comment = "Approved via frontend";
+        approval.DecisionDate = DateTime.UtcNow;
+
+        var putResponse = await _httpClient.PutAsJsonAsync(
+            $"http://localhost:5130/api/approvals/{id}",
+            approval
+        );
+
+        if (!putResponse.IsSuccessStatusCode)
+        {
+            ViewBag.Error = "Kunde inte uppdatera godkännandet.";
+        }
 
         return RedirectToAction("Index");
     }
 
     [HttpPost]
-    public async Task<IActionResult> Reject(int applicationId)
+    public async Task<IActionResult> Reject(int id)
     {
-        var approval = new Approval
+        var response = await _httpClient.GetAsync($"http://localhost:5130/api/approvals/{id}");
+
+        if (!response.IsSuccessStatusCode)
         {
-            ApplicationId = applicationId,
-            ApproverId = 101,
-            Decision = "Rejected",
-            Comment = "Rejected via frontend",
-            DecisionDate = DateTime.UtcNow
-        };
+            ViewBag.Error = "Kunde inte hämta godkännandet för uppdatering.";
+            return RedirectToAction("Index");
+        }
 
-        var json = JsonSerializer.Serialize(approval);
-        var content = new StringContent(json, Encoding.UTF8, "application/json");
+        var approval = await response.Content.ReadFromJsonAsync<Approval>();
 
-        await _httpClient.PostAsync("http://localhost:5130/api/approvals", content);
+        if (approval == null)
+        {
+            ViewBag.Error = "Godkännandet kunde inte hittas.";
+            return RedirectToAction("Index");
+        }
+
+        approval.Decision = "Rejected";
+        approval.Comment = "Rejected via frontend";
+        approval.DecisionDate = DateTime.UtcNow;
+
+        var putResponse = await _httpClient.PutAsJsonAsync(
+            $"http://localhost:5130/api/approvals/{id}",
+            approval
+        );
+
+        if (!putResponse.IsSuccessStatusCode)
+        {
+            ViewBag.Error = "Kunde inte uppdatera godkännandet.";
+        }
 
         return RedirectToAction("Index");
     }
