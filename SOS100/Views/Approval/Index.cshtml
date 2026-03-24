@@ -1,0 +1,57 @@
+﻿@model List<SOS100.Models.Approval>
+
+@{
+    ViewData["Title"] = "Godkännanden";
+}
+
+<h2>Godkännanden</h2>
+
+@if (ViewBag.Error != null)
+{
+    <p style="color:red;">@ViewBag.Error</p>
+}
+
+@if (Model == null || !Model.Any())
+{
+    <p>Inga godkännanden hittades.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>ApplicationId</th>
+            <th>ApproverId</th>
+            <th>Decision</th>
+            <th>Comment</th>
+            <th>DecisionDate</th>
+            <th>Åtgärd</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var approval in Model)
+        {
+            <tr>
+                <td>@approval.Id</td>
+                <td>@approval.ApplicationId</td>
+                <td>@approval.ApproverId</td>
+                <td>@approval.Decision</td>
+                <td>@approval.Comment</td>
+                <td>@approval.DecisionDate</td>
+                <td>
+                    <form method="post" asp-controller="Approval" asp-action="Approve" style="display:inline;">
+                        <input type="hidden" name="applicationId" value="@approval.ApplicationId" />
+                        <button type="submit">Godkänn</button>
+                    </form>
+
+                    <form method="post" asp-controller="Approval" asp-action="Reject" style="display:inline; margin-left:5px;">
+                        <input type="hidden" name="applicationId" value="@approval.ApplicationId" />
+                        <button type="submit">Neka</button>
+                    </form>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
