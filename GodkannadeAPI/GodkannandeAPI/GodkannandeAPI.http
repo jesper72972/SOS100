@@ -1,6 +1,0 @@
-@GodkannandeAPI_HostAddress = http://localhost:5141
-
-GET {{GodkannandeAPI_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
