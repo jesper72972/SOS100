@@ -82,7 +82,7 @@ public class ApprovalController : Controller
         approval.Comment = comment;
         approval.DecisionDate = DateTime.UtcNow;
 
-        await _httpClient.PutAsJsonAsync($"https://app-sos100-medarbetarsformaner-asbtg7fbbvhbdybd.swedencentral-01.azurewebsites.net/api/approvals/{id}", approval);
+        await _httpClient.PutAsJsonAsync($"http://localhost:5130/api/approvals/{id}", approval);
 
         return RedirectToAction("Index");
     }
