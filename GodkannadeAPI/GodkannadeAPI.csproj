@@ -17,8 +17,4 @@
         <PackageReference Include="Scalar.AspNetCore" Version="2.13.13" />
     </ItemGroup>
 
-    <ItemGroup>
-      <_ContentIncludedByDefault Remove="ConsoleApp1\obj\project.packagespec.json" />
-    </ItemGroup>
-
 </Project>

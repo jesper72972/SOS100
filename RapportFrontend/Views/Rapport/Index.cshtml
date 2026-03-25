@@ -1,0 +1,24 @@
+﻿@model List<Rapport>
+
+<h2>Rapporter</h2>
+
+<a href="/Rapport/Create">Skapa ny</a>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Förmån</th>
+        <th>Status</th>
+        <th>Avdelning</th>
+    </tr>
+
+    @foreach (var r in Model)
+    {
+        <tr>
+            <td>@r.Id</td>
+            <td>@r.Formanansokan</td>
+            <td>@r.Status</td>
+            <td>@r.Avdelning</td>
+        </tr>
+    }
+</table>
