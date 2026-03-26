@@ -11,7 +11,7 @@ public class ApprovalController : Controller
 {
     private readonly HttpClient _httpClient;
 
-    // Byt dessa URL:er om ni deployat till Azure
+    
     private const string ApprovalsApiUrl = "http://localhost:5130/api/approvals";
     private const string ApplicationsApiUrl = "http://localhost:5050/api/Applications";
     private const string CommentsApiUrl = "http://localhost:5030/Comments";
@@ -35,13 +35,7 @@ public class ApprovalController : Controller
             var statuses = await _httpClient.GetFromJsonAsync<List<ServiceStatusApiItem>>(ServiceStatusApiUrl)
                            ?? new List<ServiceStatusApiItem>();
 
-            // OBS:
-            // Här antar vi att ServiceStatus.ID = Application.Id
-            // Om Axel säger att kopplingen ska vara ServicID istället, byt raden:
-            // var status = statuses.FirstOrDefault(s => s.ID == app.Id);
-            // till:
-            // var status = statuses.FirstOrDefault(s => s.ServicID == app.Id);
-
+        
             var items = applications.Select(app =>
             {
                 var status = statuses.FirstOrDefault(s => s.ID == app.Id);
@@ -108,7 +102,7 @@ public class ApprovalController : Controller
             await _httpClient.PostAsJsonAsync(CommentsApiUrl, commentPayload);
         }
 
-        // 3. Synka även din egen approval-API så att din webbtjänst fortfarande används
+        
         var approvals = await _httpClient.GetFromJsonAsync<List<Approval>>(ApprovalsApiUrl)
                         ?? new List<Approval>();
 
