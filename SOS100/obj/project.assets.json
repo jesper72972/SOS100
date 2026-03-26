@@ -6454,23 +6454,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\asaid\\.nuget\\packages\\": {},
+    "C:\\Users\\Yacqub\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\asaid\\RiderProjects\\SOS100-clean\\SOS100\\SOS100.csproj",
+      "projectUniqueName": "C:\\Users\\Yacqub\\RiderProjects\\SOS100\\SOS100\\SOS100.csproj",
       "projectName": "SOS100",
-      "projectPath": "C:\\Users\\asaid\\RiderProjects\\SOS100-clean\\SOS100\\SOS100.csproj",
-      "packagesPath": "C:\\Users\\asaid\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\asaid\\RiderProjects\\SOS100-clean\\SOS100\\obj\\",
+      "projectPath": "C:\\Users\\Yacqub\\RiderProjects\\SOS100\\SOS100\\SOS100.csproj",
+      "packagesPath": "C:\\Users\\Yacqub\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Yacqub\\RiderProjects\\SOS100\\SOS100\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\asaid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Yacqub\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -6479,7 +6479,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
