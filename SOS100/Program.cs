@@ -20,6 +20,11 @@ builder.Services.AddHttpClient<FormanerStatusService>((serviceProvider, httpClie
     httpClient.BaseAddress = new Uri("http://localhost:5030/");
 });
 
+builder.Services.AddHttpClient<RapportService>((serviceProvider, httpClient) =>
+{
+    httpClient.BaseAddress = new Uri("http://localhost:5136/");
+});
+
 builder.Services.AddSession();
 builder.Services.AddDistributedMemoryCache();
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6eYFkia41Io=",
+  "dgSpecHash": "qR0LnNnOUY4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\alext\\RiderProjects\\SOS100-main\\status-formaner-API\\status-formaner-API.csproj",
+  "projectFilePath": "C:\\Users\\alext\\RiderProjects\\SOS100\\status-formaner-API\\status-formaner-API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alext\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\alext\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.0\\microsoft.aspnetcore.openapi.10.0.0.nupkg.sha512",
