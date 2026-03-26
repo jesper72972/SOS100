@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alext\\RiderProjects\\SOS100-main\\SOS100\\SOS100.csproj": {}
+    "C:\\Users\\alext\\RiderProjects\\SOS100\\SOS100\\SOS100.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alext\\RiderProjects\\SOS100-main\\SOS100\\SOS100.csproj": {
+    "C:\\Users\\alext\\RiderProjects\\SOS100\\SOS100\\SOS100.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alext\\RiderProjects\\SOS100-main\\SOS100\\SOS100.csproj",
+        "projectUniqueName": "C:\\Users\\alext\\RiderProjects\\SOS100\\SOS100\\SOS100.csproj",
         "projectName": "SOS100",
-        "projectPath": "C:\\Users\\alext\\RiderProjects\\SOS100-main\\SOS100\\SOS100.csproj",
+        "projectPath": "C:\\Users\\alext\\RiderProjects\\SOS100\\SOS100\\SOS100.csproj",
         "packagesPath": "C:\\Users\\alext\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alext\\RiderProjects\\SOS100-main\\SOS100\\obj\\",
+        "outputPath": "C:\\Users\\alext\\RiderProjects\\SOS100\\SOS100\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

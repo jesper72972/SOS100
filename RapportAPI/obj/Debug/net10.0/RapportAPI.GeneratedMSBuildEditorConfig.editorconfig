@@ -19,17 +19,13 @@ build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v10.0
 build_property.RootNamespace = RapportAPI
 build_property.RootNamespace = RapportAPI
-build_property.ProjectDir = C:\Users\alext\RiderProjects\SOS100-main\RapportAPI\
+build_property.ProjectDir = C:\Users\alext\RiderProjects\SOS100\RapportAPI\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\alext\RiderProjects\SOS100-main\RapportAPI
+build_property.MSBuildProjectDirectory = C:\Users\alext\RiderProjects\SOS100\RapportAPI
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
-
-[C:/Users/alext/RiderProjects/SOS100-main/RapportAPI/Views/Rapport/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFwcG9ydFxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 

@@ -1,28 +1,23 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using RapportAPI.Services;
+
+namespace RapportAPI.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
 public class RapportController : ControllerBase
 {
-    private readonly AppDbContext _context;
+    private readonly RapportService _rapportService;
 
-    public RapportController(AppDbContext context)
+    public RapportController(RapportService rapportService)
     {
-        _context = context;
+        _rapportService = rapportService;
     }
 
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<Rapport>>> Get()
+    [HttpGet("statistik")]
+    public IActionResult HamtaStatistik()
     {
-        return await _context.Rapporter.ToListAsync();
-    }
-
-    [HttpPost]
-    public async Task<ActionResult<Rapport>> Post(Rapport rapport)
-    {
-        _context.Rapporter.Add(rapport);
-        await _context.SaveChangesAsync();
-        return rapport;
+        var resultat = _rapportService.HamtaStatistik();
+        return Ok(resultat);
     }
 }
