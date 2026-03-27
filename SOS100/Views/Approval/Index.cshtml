@@ -1,0 +1,90 @@
+﻿
+@model List<SOS100.Models.ManagerApprovalItem>
+
+@{
+    ViewData["Title"] = "Hantera ansökningar";
+}
+
+<link rel="stylesheet" href="~/css/approval.css" />
+
+<div class="approval-page">
+    <h2>Hantera ansökningar</h2>
+    <p class="approval-description">
+        Här kan HR granska ansökningar, se kommentarer och sedan godkänna eller neka.
+    </p>
+
+    @if (ViewBag.Error != null)
+    {
+        <p style="color:red;">@ViewBag.Error</p>
+    }
+
+    @if (Model == null || !Model.Any())
+    {
+        <div class="empty-message">
+            Det finns inga ansökningar att visa just nu.
+        </div>
+    }
+    else
+    {
+        <table class="approval-table">
+            <thead>
+            <tr>
+                <th>Ansöknings-ID</th>
+                <th>Medarbetare</th>
+                <th>Förmån</th>
+                <th>Ansökan</th>
+                <th>Status</th>
+                <th>Admin-kommentar</th>
+                <th>Ny kommentar</th>
+                <th>Åtgärd</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model)
+            {
+                var statusClass = item.Status == "Approved"
+                    ? "status-approved"
+                    : item.Status == "Rejected"
+                        ? "status-rejected"
+                        : "status-pending";
+
+                <tr>
+                    <td>@item.ApplicationId</td>
+                    <td>@item.EmployeeName</td>
+                    <td>@item.BenefitName</td>
+                    <td>@item.ApplicationMessage</td>
+                    <td class="@statusClass">@item.Status</td>
+                    <td>@item.AdminComment</td>
+                    <td>
+                        <input form="form-@item.StatusId"
+                               class="comment-input"
+                               type="text"
+                               name="comment"
+                               placeholder="Skriv kommentar" />
+                    </td>
+                    <td>
+                        <form id="form-@item.StatusId" method="post" class="action-form">
+                            <input type="hidden" name="statusId" value="@item.StatusId" />
+                            <input type="hidden" name="applicationId" value="@item.ApplicationId" />
+
+                            <button type="submit"
+                                    class="btn-approve"
+                                    asp-controller="Approval"
+                                    asp-action="Approve">
+                                Godkänn
+                            </button>
+
+                            <button type="submit"
+                                    class="btn-reject"
+                                    asp-controller="Approval"
+                                    asp-action="Reject">
+                                Neka
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    }
+</div>

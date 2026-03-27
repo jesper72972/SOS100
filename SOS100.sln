@@ -1,5 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.4.11612.150 stable
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOS100", "SOS100\SOS100.csproj", "{932046E5-206A-412C-9A28-7080477888DB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "status-formaner-API", "status-formaner-API\status-formaner-API.csproj", "{7F9B98B6-1142-48DC-B7A1-63C1E0C20B14}"
@@ -8,7 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "formaner-API", "formaner-AP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GodkannadeAPI", "GodkannadeAPI\GodkannadeAPI.csproj", "{4DC22214-34BB-4D73-A783-5A7C6DE23C34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RapportAPI", "RapportAPI\RapportAPI.csproj", "{C02E00E1-02F4-4B64-8C4C-E6DC9A584FCF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application-API", "Application-API\Application-API.csproj", "{BB34DAD1-280F-4D90-87DE-5AD6DFC6EDB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RapportAPI", "RapportAPI\RapportAPI.csproj", "{1C44DCD9-F89C-43DD-8035-49F678F4077C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,9 +37,19 @@ Global
 		{4DC22214-34BB-4D73-A783-5A7C6DE23C34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DC22214-34BB-4D73-A783-5A7C6DE23C34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DC22214-34BB-4D73-A783-5A7C6DE23C34}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C02E00E1-02F4-4B64-8C4C-E6DC9A584FCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C02E00E1-02F4-4B64-8C4C-E6DC9A584FCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C02E00E1-02F4-4B64-8C4C-E6DC9A584FCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C02E00E1-02F4-4B64-8C4C-E6DC9A584FCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB34DAD1-280F-4D90-87DE-5AD6DFC6EDB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB34DAD1-280F-4D90-87DE-5AD6DFC6EDB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB34DAD1-280F-4D90-87DE-5AD6DFC6EDB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB34DAD1-280F-4D90-87DE-5AD6DFC6EDB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C44DCD9-F89C-43DD-8035-49F678F4077C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C44DCD9-F89C-43DD-8035-49F678F4077C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C44DCD9-F89C-43DD-8035-49F678F4077C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C44DCD9-F89C-43DD-8035-49F678F4077C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1963DF65-CDC2-47B0-94D9-A709998EA269}
 	EndGlobalSection
 EndGlobal

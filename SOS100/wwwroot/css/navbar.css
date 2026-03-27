@@ -1,0 +1,16 @@
+.navbar {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    width: 100%;
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+}

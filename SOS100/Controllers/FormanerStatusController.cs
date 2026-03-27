@@ -36,6 +36,13 @@ public class FormanerStatusController : Controller
     }
     
        [HttpPost]
+    public async Task<IActionResult> UpdateUserComment(int id, int statusOBJ, string userComment)
+    {
+        await _statusService.UpdateComment(new Comment { ID = id, StatusOBJ = statusOBJ, UserCommemt = userComment });
+        return RedirectToAction("FormanerStatus");
+    }
+
+    [HttpPost]
     public async Task<IActionResult> CreateUserComment(int statusOBJ, string userComment)
     {
         await _statusService.CreateComment(new Comment { StatusOBJ = statusOBJ, UserCommemt = userComment });
