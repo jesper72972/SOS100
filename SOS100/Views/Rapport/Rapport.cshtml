@@ -1,0 +1,40 @@
+﻿@model SOS100.Models.RapportStatistik
+@{
+    ViewData["Title"] = "Rapport";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/rapport.css" />
+
+<div class="rapport-container">
+    <h1>Rapport över förmåner</h1>
+
+    <div class="rapport-box">
+        <p><strong>Total kostnad (aktiva):</strong> @Model.TotalKostnad kr</p>
+        <p><strong>Antal aktiva förmåner:</strong> @Model.AntalAktivaFormaner</p>
+    </div>
+
+    <h2>Kostnad och användning per förmån</h2>
+
+    <table class="rapport-tabell">
+        <thead>
+        <tr>
+            <th>Förmån</th>
+            <th>Kostnad</th>
+            <th>Status</th>
+            <th>Antal personer</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var f in Model.KostnadPerForman)
+        {
+            <tr class="@(f.Aktiv ? "aktiv" : "inaktiv")">
+                <td>@f.Namn</td>
+                <td>@f.Kostnad kr</td>
+                <td>@(f.Aktiv ? "Aktiv" : "Inaktiv")</td>
+                <td>@f.AntalPersoner</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

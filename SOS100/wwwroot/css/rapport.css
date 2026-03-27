@@ -1,0 +1,35 @@
+﻿.rapport-container {
+    margin: 30px;
+}
+
+.rapport-box {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+
+.rapport-tabell {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.rapport-tabell th,
+.rapport-tabell td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.rapport-tabell th {
+    background-color: #e9e9e9;
+}
+
+.aktiv {
+    background-color: #e7ffe7;
+}
+
+.inaktiv {
+    background-color: #ffe7e7;
+    color: #777;
+}
