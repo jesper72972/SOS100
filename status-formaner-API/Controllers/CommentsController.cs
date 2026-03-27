@@ -29,6 +29,17 @@ public class CommentsController : ControllerBase
         return Ok(comment);
     }
 
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(int id, Comment comment)
+    {
+        var existing = await _db.Comments.FindAsync(id);
+        if (existing == null) return NotFound();
+        existing.UserCommemt = comment.UserCommemt;
+        existing.AdminComment = comment.AdminComment;
+        await _db.SaveChangesAsync();
+        return Ok(existing);
+    }
+
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id)
     {

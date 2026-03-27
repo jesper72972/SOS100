@@ -19,7 +19,8 @@ public class ApprovalsController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Approval>>> GetApprovals()
     {
-        return await _context.Approvals.ToListAsync();
+        var approvals = await _context.Approvals.ToListAsync();
+        return Ok(approvals);
     }
 
     [HttpGet("{id}")]
@@ -32,7 +33,7 @@ public class ApprovalsController : ControllerBase
             return NotFound();
         }
 
-        return approval;
+        return Ok(approval);
     }
 
     [HttpPost]
@@ -49,10 +50,11 @@ public class ApprovalsController : ControllerBase
     {
         if (id != approval.Id)
         {
-            return BadRequest("Id in URL does not match body.");
+            return BadRequest("Id in  does not match body.");
         }
 
         var existingApproval = await _context.Approvals.FindAsync(id);
+
         if (existingApproval == null)
         {
             return NotFound();

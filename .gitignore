@@ -8,3 +8,21 @@ obj/
 *.user
 *.suo
 .nuget/
+
+# Databaser
+*.db
+*.db-shm
+*.db-wal
+
+# Rider/JetBrains
+.idea/
+
+# Migrationer (autogenererade)
+**/Migrations/
+
+# Node / frontend
+node_modules/
+wwwroot/lib/
+
+# Publish output
+**/publish/

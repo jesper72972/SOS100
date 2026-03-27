@@ -1,10 +1,12 @@
 ﻿using System.Net.Http.Json;
 using System.Text.Json;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SOS100.Models;
 
 namespace SOS100.Controllers;
 
+[Authorize]
 public class ApprovalController : Controller
 {
     private readonly HttpClient _httpClient;

@@ -52,6 +52,12 @@
             "Pending"  => "bg-warning text-dark",
             _          => "bg-secondary"
         };
+
+        var lastComment = comments.OrderByDescending(c => c.ID).FirstOrDefault();
+        var canEdit = lastComment != null
+                      && !string.IsNullOrEmpty(lastComment.UserCommemt)
+                      && string.IsNullOrEmpty(lastComment.AdminComment);
+
         <div class="card mb-3">
             <div class="card-body">
                 <h5 class="card-title">@status.Name</h5>
@@ -70,15 +76,27 @@
                     }
                 }
 
-                <form asp-action="CreateUserComment" method="post" class="mt-2">
-                    <input type="hidden" name="statusOBJ" value="@status.ID" />
-                    <textarea name="userComment" class="form-control mb-1" rows="2" placeholder="Skriv en kommentar..."></textarea>
-                    <button type="submit" class="btn btn-sm btn-primary">Skicka kommentar</button>
-                </form>
+                @if (canEdit)
+                {
+                    <form asp-action="UpdateUserComment" method="post" class="mt-2">
+                        <input type="hidden" name="id" value="@lastComment!.ID" />
+                        <input type="hidden" name="statusOBJ" value="@status.ID" />
+                        <textarea name="userComment" class="form-control mb-1" rows="2">@lastComment!.UserCommemt</textarea>
+                        <button type="submit" class="btn btn-sm btn-warning">Uppdatera kommentar</button>
+                    </form>
+                }
+                else
+                {
+                    <form asp-action="CreateUserComment" method="post" class="mt-2">
+                        <input type="hidden" name="statusOBJ" value="@status.ID" />
+                        <textarea name="userComment" class="form-control mb-1" rows="2" placeholder="Skriv en kommentar..."></textarea>
+                        <button type="submit" class="btn btn-sm btn-primary">Skicka kommentar</button>
+                    </form>
+                }
             </div>
         </div>
     }
-</div>
+    </div>
 
 <!-- ADMIN PANEL -->
 <div id="admin-panel" style="display:none;">
