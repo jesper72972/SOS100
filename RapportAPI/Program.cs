@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<RapportService>();
 
 builder.Services.AddDbContext<DatabasContext>(options =>
-    options.UseSqlite("Data Source=rapport.db"));
+    options.UseSqlite("Data Source=/home/site/wwwroot/rapport.db"));
 
 builder.Services.AddControllers();
 
@@ -17,15 +17,12 @@ var app = builder.Build();
 app.UseAuthorization();
 app.MapControllers();
 
-// Test endpoints så du ser att Azure funkar
-app.MapGet("/", () => "Rapport API kör!");
-app.MapGet("/test", () => "Test endpoint fungerar!");
 
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<DatabasContext>();
 
-    db.Database.EnsureCreated(); // Skapar DB om den inte finns
+    db.Database.EnsureCreated();  //skapar ifall inte finns, tagit bort EnsureDeleted från testfas
 
     if (!db.Formaner.Any())
     {
