@@ -21,4 +21,12 @@
       <Folder Include="wwwroot\Images\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="wwwroot\Images\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="obj\Debug\net10.0\staticwebassets.removed.txt" />
+    </ItemGroup>
+
 </Project>
