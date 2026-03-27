@@ -43,6 +43,11 @@ public class FormanerStatusService
         await _httpClient.PostAsJsonAsync("Comments", comment);
     }
 
+    public async Task UpdateComment(Comment comment)
+    {
+        await _httpClient.PutAsJsonAsync($"Comments/{comment.ID}", comment);
+    }
+
     public async Task UpdateStatus(int id, string newStatus)
     {
         await _httpClient.PutAsJsonAsync($"ServiceStatus/{id}/status", newStatus);

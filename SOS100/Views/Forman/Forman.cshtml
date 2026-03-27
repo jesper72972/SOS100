@@ -8,17 +8,14 @@
     ViewData["Title"] = "Förmåner";
 }    
 
-<h2>@ViewData["Title"]</h2> 
+<div class="formaner-content">
+    <h2>@ViewData["Title"]</h2>
 
-<a asp-action="Index" asp-controller="Home">Startsida</a>
-
-
-
-<div>
+    <div>
         @foreach (var forman in Model.OrderBy(x => x.Title)) 
         {
             <p id="titel">@forman.Title</p>
             <p class="formanerna" id="categorie">@forman.categorie <br/> @forman.Description <br/> <br/>  <button>Ansök här!</button> </p>   
         }
     </div>
-    
+</div>
