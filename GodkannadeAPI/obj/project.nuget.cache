@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CzEDkVJIFcI=",
+  "dgSpecHash": "baDWLPl6Pwo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\axell\\Documents\\Rider\\SOS100\\GodkannadeAPI\\GodkannadeAPI.csproj",
+  "projectFilePath": "C:\\Users\\axell\\Documents\\Rider\\SUS100\\GodkannadeAPI\\GodkannadeAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\axell\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\axell\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.3\\microsoft.aspnetcore.openapi.10.0.3.nupkg.sha512",

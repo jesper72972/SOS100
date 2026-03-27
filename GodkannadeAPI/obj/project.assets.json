@@ -2513,11 +2513,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\axell\\Documents\\Rider\\SOS100\\GodkannadeAPI\\GodkannadeAPI.csproj",
+      "projectUniqueName": "C:\\Users\\axell\\Documents\\Rider\\SUS100\\GodkannadeAPI\\GodkannadeAPI.csproj",
       "projectName": "GodkannadeAPI",
-      "projectPath": "C:\\Users\\axell\\Documents\\Rider\\SOS100\\GodkannadeAPI\\GodkannadeAPI.csproj",
+      "projectPath": "C:\\Users\\axell\\Documents\\Rider\\SUS100\\GodkannadeAPI\\GodkannadeAPI.csproj",
       "packagesPath": "C:\\Users\\axell\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\axell\\Documents\\Rider\\SOS100\\GodkannadeAPI\\obj\\",
+      "outputPath": "C:\\Users\\axell\\Documents\\Rider\\SUS100\\GodkannadeAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\axell\\AppData\\Roaming\\NuGet\\NuGet.Config"
