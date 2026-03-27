@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("formaner-API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+53685f18dfa3d63420be1b154db5242b89529d8f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7075934f3c3affb9c3a3ae4f1e66c00cac179dc5")]
 [assembly: System.Reflection.AssemblyProductAttribute("formaner-API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("formaner-API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
