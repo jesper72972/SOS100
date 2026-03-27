@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GodkannadeAPI", "Godkannade
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RapportAPI", "RapportAPI\RapportAPI.csproj", "{C02E00E1-02F4-4B64-8C4C-E6DC9A584FCF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application-API", "Application-API\Application-API\Application-API.csproj", "{1C44DCD9-F89C-43DD-8035-49F678F4077C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{C02E00E1-02F4-4B64-8C4C-E6DC9A584FCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C02E00E1-02F4-4B64-8C4C-E6DC9A584FCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C02E00E1-02F4-4B64-8C4C-E6DC9A584FCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C44DCD9-F89C-43DD-8035-49F678F4077C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C44DCD9-F89C-43DD-8035-49F678F4077C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C44DCD9-F89C-43DD-8035-49F678F4077C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C44DCD9-F89C-43DD-8035-49F678F4077C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

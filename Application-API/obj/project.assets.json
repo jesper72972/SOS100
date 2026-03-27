@@ -2780,11 +2780,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\axell\\Documents\\Rider\\SUS100\\Application-API\\Application-API.csproj",
+      "projectUniqueName": "C:\\Users\\axell\\Documents\\Rider\\Emergency\\Application-API\\Application-API.csproj",
       "projectName": "Application-API",
-      "projectPath": "C:\\Users\\axell\\Documents\\Rider\\SUS100\\Application-API\\Application-API.csproj",
+      "projectPath": "C:\\Users\\axell\\Documents\\Rider\\Emergency\\Application-API\\Application-API.csproj",
       "packagesPath": "C:\\Users\\axell\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\axell\\Documents\\Rider\\SUS100\\Application-API\\obj\\",
+      "outputPath": "C:\\Users\\axell\\Documents\\Rider\\Emergency\\Application-API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\axell\\AppData\\Roaming\\NuGet\\NuGet.Config"
