@@ -1,6 +1,9 @@
-bin/
+﻿bin/
 obj/
 .vs/
+.idea/
 *.user
 *.suo
 *.db
+*.sqlite
+identifier.sqlite

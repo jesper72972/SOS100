@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GodkannadeAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7075934f3c3affb9c3a3ae4f1e66c00cac179dc5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+82b3461c1f020ba8738a8f755e8731484fc0ed87")]
 [assembly: System.Reflection.AssemblyProductAttribute("GodkannadeAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GodkannadeAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

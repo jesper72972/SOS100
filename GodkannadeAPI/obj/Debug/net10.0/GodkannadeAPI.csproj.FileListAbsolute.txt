@@ -1,0 +1,9 @@
+C:\Users\alext\RiderProjects\SOS100-main\GodkannadeAPI\obj\Debug\net10.0\GodkannadeAPI.csproj.AssemblyReference.cache
+C:\Users\alext\RiderProjects\SOS100-main\GodkannadeAPI\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\Users\alext\RiderProjects\SOS100-main\GodkannadeAPI\obj\Debug\net10.0\GodkannadeAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alext\RiderProjects\SOS100-main\GodkannadeAPI\obj\Debug\net10.0\GodkannadeAPI.AssemblyInfoInputs.cache
+C:\Users\alext\RiderProjects\SOS100-main\GodkannadeAPI\obj\Debug\net10.0\GodkannadeAPI.AssemblyInfo.cs
+C:\Users\alext\RiderProjects\SOS100-main\GodkannadeAPI\obj\Debug\net10.0\GodkannadeAPI.csproj.CoreCompileInputs.cache
+C:\Users\alext\RiderProjects\SOS100-main\GodkannadeAPI\obj\Debug\net10.0\GodkannadeAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\alext\RiderProjects\SOS100-main\GodkannadeAPI\obj\Debug\net10.0\GodkannadeAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\alext\RiderProjects\SOS100-main\GodkannadeAPI\obj\Debug\net10.0\GodkannadeAPI.sourcelink.json
