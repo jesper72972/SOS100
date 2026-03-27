@@ -51,7 +51,7 @@ public class ApprovalsController : ControllerBase
     {
         if (id != approval.Id)
         {
-            return BadRequest("Id in URL does not match body.");
+            return BadRequest("Id in  does not match body.");
         }
 
         var existingApproval = await _context.Approvals.FindAsync(id);
