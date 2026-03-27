@@ -17,12 +17,15 @@ var app = builder.Build();
 app.UseAuthorization();
 app.MapControllers();
 
+// Test endpoints så du ser att Azure funkar
+app.MapGet("/", () => "Rapport API kör!");
+app.MapGet("/test", () => "Test endpoint fungerar!");
+
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<DatabasContext>();
 
-    db.Database.EnsureDeleted();
-    db.Database.EnsureCreated();
+    db.Database.EnsureCreated(); // Skapar DB om den inte finns
 
     if (!db.Formaner.Any())
     {
@@ -31,7 +34,7 @@ using (var scope = app.Services.CreateScope())
         var massage = new Forman { Namn = "Massage", Kostnad = 2000, Aktiv = false };
 
         db.Formaner.AddRange(gymkort, friskvard, massage);
-        db.SaveChanges(); // 🔥 Viktigt – nu får de Id
+        db.SaveChanges();
 
         db.Ansokningar.AddRange(
             new Ansokan { FormanId = gymkort.Id, MedarbetarNamn = "Anna", Beviljad = true },

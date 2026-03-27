@@ -1,9 +1,9 @@
-﻿bin/
+bin/
 obj/
-.vs/
 .idea/
+.vs/
 *.user
 *.suo
-*.db
-*.sqlite
-identifier.sqlite
+*.db-shm
+*.db-wal
+*.sqbpro

@@ -16,4 +16,13 @@
         </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="publish\web.config" />
+      <_ContentIncludedByDefault Remove="publish\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="publish\appsettings.json" />
+      <_ContentIncludedByDefault Remove="publish\RapportAPI.deps.json" />
+      <_ContentIncludedByDefault Remove="publish\RapportAPI.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="publish\RapportAPI.staticwebassets.endpoints.json" />
+    </ItemGroup>
+
 </Project>
