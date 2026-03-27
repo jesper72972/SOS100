@@ -22,7 +22,7 @@ builder.Services.AddHttpClient<FormanerStatusService>((serviceProvider, httpClie
 
 builder.Services.AddHttpClient<RapportService>((serviceProvider, httpClient) =>
 {
-    httpClient.BaseAddress = new Uri("http://localhost:5136/");
+    httpClient.BaseAddress = new Uri("https://app-sos100-rapport-b6bncnaga4h6e7du.swedencentral-01.azurewebsites.net/");
 });
 
 builder.Services.AddSession();
