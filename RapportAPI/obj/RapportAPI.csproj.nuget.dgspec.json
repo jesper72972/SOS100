@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\axell\\Documents\\Rider\\SUS100\\RapportAPI\\RapportAPI.csproj": {}
+    "C:\\Users\\axell\\Documents\\Rider\\SOS100\\RapportAPI\\RapportAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\axell\\Documents\\Rider\\SUS100\\RapportAPI\\RapportAPI.csproj": {
+    "C:\\Users\\axell\\Documents\\Rider\\SOS100\\RapportAPI\\RapportAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\axell\\Documents\\Rider\\SUS100\\RapportAPI\\RapportAPI.csproj",
+        "projectUniqueName": "C:\\Users\\axell\\Documents\\Rider\\SOS100\\RapportAPI\\RapportAPI.csproj",
         "projectName": "RapportAPI",
-        "projectPath": "C:\\Users\\axell\\Documents\\Rider\\SUS100\\RapportAPI\\RapportAPI.csproj",
+        "projectPath": "C:\\Users\\axell\\Documents\\Rider\\SOS100\\RapportAPI\\RapportAPI.csproj",
         "packagesPath": "C:\\Users\\axell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\axell\\Documents\\Rider\\SUS100\\RapportAPI\\obj\\",
+        "outputPath": "C:\\Users\\axell\\Documents\\Rider\\SOS100\\RapportAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\axell\\AppData\\Roaming\\NuGet\\NuGet.Config"

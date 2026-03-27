@@ -6459,11 +6459,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\axell\\Documents\\Rider\\SUS100\\SOS100\\SOS100.csproj",
+      "projectUniqueName": "C:\\Users\\axell\\Documents\\Rider\\SOS100\\SOS100\\SOS100.csproj",
       "projectName": "SOS100",
-      "projectPath": "C:\\Users\\axell\\Documents\\Rider\\SUS100\\SOS100\\SOS100.csproj",
+      "projectPath": "C:\\Users\\axell\\Documents\\Rider\\SOS100\\SOS100\\SOS100.csproj",
       "packagesPath": "C:\\Users\\axell\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\axell\\Documents\\Rider\\SUS100\\SOS100\\obj\\",
+      "outputPath": "C:\\Users\\axell\\Documents\\Rider\\SOS100\\SOS100\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\axell\\AppData\\Roaming\\NuGet\\NuGet.Config"
