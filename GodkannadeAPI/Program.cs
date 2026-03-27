@@ -6,8 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
+
 builder.Services.AddDbContext<ApprovalDbContext>(options =>
-    options.UseSqlite("Data Source=approvals.db"));
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddOpenApi();
 
@@ -27,5 +28,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapControllers();
-app.MapGet("/", ()  => "GodkannandeAPI is running ");
+
+
+app.MapGet("/", () => "GodkannandeAPI is running");
+
 app.Run();

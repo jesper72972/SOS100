@@ -1,10 +1,2 @@
-POST http://localhost:5130/api/approvals
-Content-Type: application/json
-
-{
-  "applicationId": 2,
-  "approverId": 102,
-  "decision": "Rejected",
-  "comment": "Skapad för test",
-  "decisionDate": "2026-03-23T12:00:00Z"
-}
+### GET ALL
+GET http://localhost:5130/api/approvals

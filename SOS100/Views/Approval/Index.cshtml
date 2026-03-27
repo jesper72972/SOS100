@@ -1,4 +1,5 @@
-﻿@model List<SOS100.Models.Approval>
+﻿
+@model List<SOS100.Models.ManagerApprovalItem>
 
 @{
     ViewData["Title"] = "Hantera ansökningar";
@@ -9,7 +10,7 @@
 <div class="approval-page">
     <h2>Hantera ansökningar</h2>
     <p class="approval-description">
-        Här kan HR granska inkomna ansökningar, skriva en kommentar och sedan godkänna eller neka.
+        Här kan HR granska ansökningar, se kommentarer och sedan godkänna eller neka.
     </p>
 
     @if (ViewBag.Error != null)
@@ -27,43 +28,44 @@
     {
         <table class="approval-table">
             <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Ansöknings-ID</th>
-                    <th>Godkännare</th>
-                    <th>Status</th>
-                    <th>Nuvarande kommentar</th>
-                    <th>Beslutsdatum</th>
-                    <th>Ny kommentar</th>
-                    <th>Åtgärd</th>
-                </tr>
+            <tr>
+                <th>Ansöknings-ID</th>
+                <th>Medarbetare</th>
+                <th>Förmån</th>
+                <th>Ansökan</th>
+                <th>Status</th>
+                <th>Admin-kommentar</th>
+                <th>Ny kommentar</th>
+                <th>Åtgärd</th>
+            </tr>
             </thead>
             <tbody>
-            @foreach (var approval in Model)
+            @foreach (var item in Model)
             {
-                var statusClass = approval.Decision == "Approved"
+                var statusClass = item.Status == "Approved"
                     ? "status-approved"
-                    : approval.Decision == "Rejected"
+                    : item.Status == "Rejected"
                         ? "status-rejected"
                         : "status-pending";
 
                 <tr>
-                    <td>@approval.Id</td>
-                    <td>@approval.ApplicationId</td>
-                    <td>@approval.ApproverId</td>
-                    <td class="@statusClass">@approval.Decision</td>
-                    <td>@approval.Comment</td>
-                    <td>@approval.DecisionDate</td>
+                    <td>@item.ApplicationId</td>
+                    <td>@item.EmployeeName</td>
+                    <td>@item.BenefitName</td>
+                    <td>@item.ApplicationMessage</td>
+                    <td class="@statusClass">@item.Status</td>
+                    <td>@item.AdminComment</td>
                     <td>
-                        <input form="form-@approval.Id"
+                        <input form="form-@item.StatusId"
                                class="comment-input"
                                type="text"
                                name="comment"
                                placeholder="Skriv kommentar" />
                     </td>
                     <td>
-                        <form id="form-@approval.Id" method="post" class="action-form">
-                            <input type="hidden" name="id" value="@approval.Id" />
+                        <form id="form-@item.StatusId" method="post" class="action-form">
+                            <input type="hidden" name="statusId" value="@item.StatusId" />
+                            <input type="hidden" name="applicationId" value="@item.ApplicationId" />
 
                             <button type="submit"
                                     class="btn-approve"
