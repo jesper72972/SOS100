@@ -18,6 +18,13 @@
         {
             <a class="nav-link" asp-controller="HR" asp-action="HR">HR</a>
         }
+
+        <!-- ✅ DIN NYA SIDA -->
+        @if (!(currentController == "Applications" && currentAction == "Index"))
+        {
+            <a class="nav-link" asp-controller="Applications" asp-action="Index">Ansökningar</a>
+        }
+
         @if (!(currentController == "FormanerStatus" && currentAction == "FormanerStatus"))
         {
             <a class="nav-link" asp-controller="FormanerStatus" asp-action="FormanerStatus">Status Förmåner</a>

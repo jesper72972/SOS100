@@ -1,0 +1,28 @@
+@model List<Application_API.Models.Application>
+
+<h1>Ansökningar</h1>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Anställd</th>
+        <th>Förmån</th>
+        <th>Meddelande</th>
+        <th>Status</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.EmployeeName</td>
+            <td>@item.BenefitName</td>
+            <td>@item.Message</td>
+            <td>@item.Status</td>
+        </tr>
+    }
+    </tbody>
+</table>

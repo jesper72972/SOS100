@@ -1,0 +1,26 @@
+@model Application_API.Models.Application
+
+<h2>Skapa ansökan</h2>
+
+<form asp-action="Create" method="post">
+
+    <div>
+        <label>Namn</label>
+        <input asp-for="EmployeeName" class="form-control" />
+    </div>
+
+    <div>
+        <label>Förmån</label>
+        <input asp-for="BenefitName" class="form-control" readonly />
+    </div>
+
+    <div>
+        <label>Meddelande</label>
+        <input asp-for="Message" class="form-control" />
+    </div>
+
+    <br />
+
+    <button type="submit" class="btn btn-primary">Skicka</button>
+
+</form>

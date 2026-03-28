@@ -15,7 +15,18 @@
         @foreach (var forman in Model.OrderBy(x => x.Title)) 
         {
             <p id="titel">@forman.Title</p>
-            <p class="formanerna" id="categorie">@forman.categorie <br/> @forman.Description <br/> <br/>  <button>Ansök här!</button> </p>   
+
+            <p class="formanerna" id="categorie">
+                @forman.categorie <br/> 
+                @forman.Description <br/><br/>
+
+                <a asp-controller="Applications"
+                   asp-action="Create"
+                   asp-route-benefit="@forman.categorie"
+                   class="btn btn-info">
+                    Ansök här!
+                </a>
+            </p>   
         }
     </div>
 </div>
