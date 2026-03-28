@@ -1,0 +1,34 @@
+﻿@model List<SOS100.Models.RapportPostDto>
+
+<h1>Rapporter</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Skapa ny rapport</a>
+</p>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Titel</th>
+        <th>Beskrivning</th>
+        <th>Skapad</th>
+        <th>Skapad av</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Titel</td>
+            <td>@item.Beskrivning</td>
+            <td>@item.Skapad</td>
+            <td>@item.SkapadAv</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Redigera</a>
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Ta bort</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

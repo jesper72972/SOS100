@@ -13,8 +13,8 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 builder.Services.AddHttpClient<FormanService>((serviceProvider, httpClient) =>
 {
     var config = serviceProvider.GetRequiredService<IConfiguration>();
-    string adress = config["ApiUrls:FormanerApi"] ?? config.GetValue<string>("SOS100Adress") ?? "";
-    httpClient.BaseAddress = new Uri(adress + "/");
+    string adress = config.GetValue<string>("SOS100Adress") ?? "";
+    httpClient.BaseAddress = new Uri(adress);
 });
 
 builder.Services.AddHttpClient<FormanerStatusService>((serviceProvider, httpClient) =>
@@ -28,18 +28,23 @@ builder.Services.AddHttpClient<RapportService>((serviceProvider, httpClient) =>
     httpClient.BaseAddress = new Uri("https://app-sos100-rapport-b6bncnaga4h6e7du.swedencentral-01.azurewebsites.net/");
 });
 
+builder.Services.AddHttpClient<RapportPostService>((serviceProvider, httpClient) =>
+{
+    httpClient.BaseAddress = new Uri("https://app-sos100-rapport-b6bncnaga4h6e7du.swedencentral-01.azurewebsites.net/");
+});
+
 builder.Services.AddSession();
 builder.Services.AddDistributedMemoryCache();
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+/*if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
-}
+}*/
 
 app.UseHttpsRedirection();
 app.UseRouting();

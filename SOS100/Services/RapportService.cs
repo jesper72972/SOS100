@@ -1,4 +1,4 @@
-﻿using System.Net.Http.Json;
+﻿using System.Text.Json;
 using SOS100.Models;
 
 namespace SOS100.Services;
@@ -12,16 +12,18 @@ public class RapportService
         _httpClient = httpClient;
     }
 
-    public async Task<RapportStatistik> HamtaRapportStatistik()
+    public async Task<RapportStatistik?> GetStatistikAsync()
     {
-        try
+        var response = await _httpClient.GetAsync("api/rapport/statistik");
+        response.EnsureSuccessStatusCode();
+
+        var json = await response.Content.ReadAsStringAsync();
+
+        var options = new JsonSerializerOptions
         {
-            var resultat = await _httpClient.GetFromJsonAsync<RapportStatistik>("api/rapport/statistik");
-            return resultat ?? new RapportStatistik();
-        }
-        catch
-        {
-            return new RapportStatistik();
-        }
+            PropertyNameCaseInsensitive = true
+        };
+
+        return JsonSerializer.Deserialize<RapportStatistik>(json, options);
     }
 }

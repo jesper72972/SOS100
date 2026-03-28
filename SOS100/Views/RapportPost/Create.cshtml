@@ -1,0 +1,23 @@
+﻿@model SOS100.Models.RapportPostDto
+
+<h1>Skapa rapport</h1>
+
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label for="Titel" class="form-label">Titel</label>
+        <input id="Titel" name="Titel" class="form-control" value="@Model?.Titel" />
+    </div>
+
+    <div class="mb-3">
+        <label for="Beskrivning" class="form-label">Beskrivning</label>
+        <input id="Beskrivning" name="Beskrivning" class="form-control" value="@Model?.Beskrivning" />
+    </div>
+
+    <div class="mb-3">
+        <label for="SkapadAv" class="form-label">Skapad av</label>
+        <input id="SkapadAv" name="SkapadAv" class="form-control" value="@Model?.SkapadAv" />
+    </div>
+
+    <button type="submit" class="btn btn-success">Spara</button>
+    <a asp-action="Index" class="btn btn-secondary">Tillbaka</a>
+</form>

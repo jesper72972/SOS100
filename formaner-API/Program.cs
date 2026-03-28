@@ -20,7 +20,14 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("ReactAppPolicy", policy =>
     {
-        policy.WithOrigins("http://localhost:5173")
+        policy.WithOrigins(
+                "http://localhost:5173",
+                "http://localhost:5118",
+                "https://app-sos100-formaner.azurewebsites.net",
+                "https://app-sos100-application-chfqc9fxeubbf7aw.swedencentral-01.azurewebsites.net",
+                "https://app-sos100-godkannade.azurewebsites.net",
+                "https://app-sos100-rapport-b6bncnaga4h6e7du.swedencentral-01.azurewebsites.net",
+                "https://app-sos100-status-formaner.azurewebsites.net")
             .AllowAnyHeader()
             .AllowAnyMethod();
     });

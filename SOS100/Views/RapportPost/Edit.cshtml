@@ -1,0 +1,26 @@
+﻿@model SOS100.Models.RapportPostDto
+
+<h1>Redigera rapport</h1>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="Skapad" />
+
+    <div class="mb-3">
+        <label asp-for="Titel" class="form-label"></label>
+        <input asp-for="Titel" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Beskrivning" class="form-label"></label>
+        <input asp-for="Beskrivning" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="SkapadAv" class="form-label"></label>
+        <input asp-for="SkapadAv" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Spara ändringar</button>
+    <a asp-action="Index" class="btn btn-secondary">Tillbaka</a>
+</form>

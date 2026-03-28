@@ -15,9 +15,9 @@ public class RapportController : ControllerBase
     }
 
     [HttpGet("statistik")]
-    public IActionResult HamtaStatistik()
+    public async Task<IActionResult> HamtaStatistik()
     {
-        var resultat = _rapportService.HamtaStatistik();
+        var resultat = await _rapportService.HamtaStatistikAsync();
         return Ok(resultat);
     }
 }

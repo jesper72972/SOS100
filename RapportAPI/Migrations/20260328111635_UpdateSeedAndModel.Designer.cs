@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RapportAPI.Data;
 
@@ -10,9 +11,11 @@ using RapportAPI.Data;
 namespace RapportAPI.Migrations
 {
     [DbContext(typeof(DatabasContext))]
-    partial class DatabasContextModelSnapshot : ModelSnapshot
+    [Migration("20260328111635_UpdateSeedAndModel")]
+    partial class UpdateSeedAndModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "10.0.5");

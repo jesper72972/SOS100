@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RapportAPI.Data;
 
@@ -10,9 +11,11 @@ using RapportAPI.Data;
 namespace RapportAPI.Migrations
 {
     [DbContext(typeof(DatabasContext))]
-    partial class DatabasContextModelSnapshot : ModelSnapshot
+    [Migration("20260328110713_AddRapportPost")]
+    partial class AddRapportPost
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "10.0.5");
@@ -67,19 +70,25 @@ namespace RapportAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Beskrivning")
+                    b.Property<int>("AntalAktivaFormaner")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Avdelning")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("Skapad")
+                    b.Property<string>("Kommentar")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("SkapadAv")
-                        .IsRequired()
+                    b.Property<DateTime>("SkapadDatum")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Titel")
                         .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("TotalKostnad")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");

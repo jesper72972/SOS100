@@ -1,0 +1,51 @@
+﻿@model List<SOS100.Models.RapportPost>
+@{
+    ViewData["Title"] = "Rapportposter";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h1>Rapportposter</h1>
+
+    <p>
+        <a asp-action="Rapport" class="btn btn-secondary">Till statistik</a>
+        <a asp-action="Create" class="btn btn-primary">Skapa ny rapport</a>
+    </p>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Titel</th>
+            <th>Avdelning</th>
+            <th>Total kostnad</th>
+            <th>Aktiva förmåner</th>
+            <th>Skapad datum</th>
+            <th>Kommentar</th>
+            <th>Åtgärder</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var rapport in Model)
+        {
+            <tr>
+                <td>@rapport.Id</td>
+                <td>@rapport.Titel</td>
+                <td>@rapport.Avdelning</td>
+                <td>@rapport.TotalKostnad</td>
+                <td>@rapport.AntalAktivaFormaner</td>
+                <td>@rapport.SkapadDatum</td>
+                <td>@rapport.Kommentar</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@rapport.Id" class="btn btn-warning btn-sm">Redigera</a>
+
+                    <form asp-action="Delete" method="post" style="display:inline;">
+                        <input type="hidden" name="id" value="@rapport.Id" />
+                        <button type="submit" class="btn btn-danger btn-sm">Ta bort</button>
+                    </form>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

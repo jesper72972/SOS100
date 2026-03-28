@@ -1,0 +1,44 @@
+﻿@model SOS100.Models.RapportPost
+@{
+    ViewData["Title"] = "Skapa rapport";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h1>Skapa rapport</h1>
+
+    <form asp-action="Create" method="post">
+        <div class="mb-3">
+            <label asp-for="Titel" class="form-label"></label>
+            <input asp-for="Titel" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Avdelning" class="form-label"></label>
+            <input asp-for="Avdelning" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="TotalKostnad" class="form-label"></label>
+            <input asp-for="TotalKostnad" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="AntalAktivaFormaner" class="form-label"></label>
+            <input asp-for="AntalAktivaFormaner" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="SkapadDatum" class="form-label"></label>
+            <input asp-for="SkapadDatum" class="form-control" type="datetime-local" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Kommentar" class="form-label"></label>
+            <textarea asp-for="Kommentar" class="form-control"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Spara</button>
+        <a asp-action="Lista" class="btn btn-secondary">Tillbaka</a>
+    </form>
+</div>

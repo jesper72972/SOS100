@@ -12,4 +12,5 @@ public class DatabasContext : DbContext
 
     public DbSet<Forman> Formaner { get; set; }
     public DbSet<Ansokan> Ansokningar { get; set; }
+    public DbSet<RapportPost> RapportPoster { get; set; }
 }

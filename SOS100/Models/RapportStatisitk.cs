@@ -2,15 +2,16 @@
 
 public class RapportStatistik
 {
-    public decimal TotalKostnad { get; set; }
-    public int AntalAktivaFormaner { get; set; }
-    public RapportForman[] KostnadPerForman { get; set; } = Array.Empty<RapportForman>();
+    public int TotaltAntalFormaner { get; set; }
+    public int TotaltAntalAnsokningar { get; set; }
+    public int TotaltAntalGodkanda { get; set; }
+    public List<RapportForman> StatistikPerForman { get; set; } = new();
 }
 
 public class RapportForman
 {
     public string Namn { get; set; } = string.Empty;
-    public decimal Kostnad { get; set; }
-    public bool Aktiv { get; set; }
-    public int AntalPersoner { get; set; }
+    public string Kategori { get; set; } = string.Empty;
+    public int AntalAnsokningar { get; set; }
+    public int AntalGodkanda { get; set; }
 }

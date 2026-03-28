@@ -27,6 +27,16 @@
         {
             <a class="nav-link" asp-controller="Approval" asp-action="Index">Granska ansökningar</a>
         }
+        @if (isLoggedIn && !(currentController == "RapportPost" && currentAction == "Index"))
+        {
+            <a class="nav-link" asp-controller="RapportPost" asp-action="Index">Rapporter</a>
+        }
+
+        @if (isLoggedIn && !(currentController == "Rapport" && currentAction == "Rapport"))
+        {
+            <a class="nav-link" asp-controller="Rapport" asp-action="Rapport">Statistik</a>
+        }
+        
     </div>
     @if (isLoggedIn)
     {
