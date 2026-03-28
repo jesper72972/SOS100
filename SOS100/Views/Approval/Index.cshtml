@@ -29,13 +29,11 @@
         <table class="approval-table">
             <thead>
             <tr>
-                <th>Ansöknings-ID</th>
                 <th>Medarbetare</th>
                 <th>Förmån</th>
                 <th>Ansökan</th>
                 <th>Status</th>
-                <th>Admin-kommentar</th>
-                <th>Ny kommentar</th>
+                <th>Kommentarer</th>
                 <th>Åtgärd</th>
             </tr>
             </thead>
@@ -49,23 +47,24 @@
                         : "status-pending";
 
                 <tr>
-                    <td>@item.ApplicationId</td>
                     <td>@item.EmployeeName</td>
                     <td>@item.BenefitName</td>
                     <td>@item.ApplicationMessage</td>
                     <td class="@statusClass">@item.Status</td>
-                    <td>@item.AdminComment</td>
                     <td>
-                        <input form="form-@item.StatusId"
-                               class="comment-input"
-                               type="text"
-                               name="comment"
-                               placeholder="Skriv kommentar" />
+                        <button class="btn-comment" onclick="openComments(@item.StatusId)" title="Visa kommentarer">
+                            💬
+                            @if (item.HasUnreadUserComment)
+                            {
+                                <span class="unread-dot" title="Obesvarad kommentar"></span>
+                            }
+                        </button>
                     </td>
                     <td>
                         <form id="form-@item.StatusId" method="post" class="action-form">
                             <input type="hidden" name="statusId" value="@item.StatusId" />
                             <input type="hidden" name="applicationId" value="@item.ApplicationId" />
+                            <input type="hidden" name="comment" id="hidden-comment-@item.StatusId" />
 
                             <button type="submit"
                                     class="btn-approve"
@@ -88,3 +87,187 @@
         </table>
     }
 </div>
+
+<!-- Comment modals -->
+@foreach (var item in Model ?? new List<SOS100.Models.ManagerApprovalItem>())
+{
+    <div id="modal-@item.StatusId" class="comment-modal" onclick="closeComments(@item.StatusId)">
+        <div class="comment-modal-content" onclick="event.stopPropagation()">
+            <div class="comment-modal-header">
+                <strong>@item.EmployeeName – @item.BenefitName</strong>
+                <button class="comment-modal-close" onclick="closeComments(@item.StatusId)">✕</button>
+            </div>
+            <div class="comment-modal-body" id="chat-@item.StatusId">
+                @if (!item.AllComments.Any())
+                {
+                    <p class="no-comments">Inga kommentarer ännu.</p>
+                }
+                @foreach (var c in item.AllComments)
+                {
+                    if (!string.IsNullOrEmpty(c.AdminComment))
+                    {
+                        <div class="comment-bubble admin-bubble">
+                            <span class="comment-label">Admin</span>
+                            <p>@c.AdminComment</p>
+                        </div>
+                    }
+                    if (!string.IsNullOrEmpty(c.UserCommemt))
+                    {
+                        <div class="comment-bubble user-bubble">
+                            <span class="comment-label">Användare</span>
+                            <p>@c.UserCommemt</p>
+                        </div>
+                    }
+                }
+            </div>
+            <div class="comment-modal-footer">
+                <input type="text"
+                       id="chat-input-@item.StatusId"
+                       class="chat-input"
+                       placeholder="Skriv en kommentar..." />
+                <button class="chat-send-btn" onclick="sendComment(@item.StatusId)">Skicka ➤</button>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+<script>
+    function openComments(id) {
+        var modal = document.getElementById('modal-' + id);
+        modal.style.display = 'flex';
+        var body = document.getElementById('chat-' + id);
+        body.scrollTop = body.scrollHeight;
+    }
+    function closeComments(id) {
+        document.getElementById('modal-' + id).style.display = 'none';
+    }
+    function sendComment(statusId) {
+        var input = document.getElementById('chat-input-' + statusId);
+        var hidden = document.getElementById('hidden-comment-' + statusId);
+        if (!input.value.trim()) return;
+        hidden.value = input.value.trim();
+
+        // Submit whichever button was last used, default Approve to carry the comment
+        document.getElementById('form-' + statusId).querySelector('.btn-approve').click();
+    }
+</script>
+<style>
+    .btn-comment {
+        background: none;
+        border: none;
+        font-size: 1.4rem;
+        cursor: pointer;
+        position: relative;
+        padding: 0;
+    }
+    .unread-dot {
+        position: absolute;
+        top: 0; right: -4px;
+        width: 10px; height: 10px;
+        background: red;
+        border-radius: 50%;
+        display: inline-block;
+    }
+    .comment-modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 1000;
+        align-items: center;
+        justify-content: center;
+    }
+    .comment-modal-content {
+        background: white;
+        border-radius: 8px;
+        width: 440px;
+        max-height: 75vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .comment-modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px;
+        border-bottom: 1px solid #ddd;
+        font-size: 0.95rem;
+    }
+    .comment-modal-close {
+        background: none;
+        border: none;
+        font-size: 1.1rem;
+        cursor: pointer;
+    }
+    .comment-modal-body {
+        padding: 16px;
+        overflow-y: auto;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .no-comments {
+        color: #999;
+        text-align: center;
+        margin: auto;
+    }
+    .comment-bubble {
+        border-radius: 12px;
+        padding: 8px 12px;
+        max-width: 80%;
+    }
+    .comment-bubble p { margin: 0; font-size: 0.9rem; }
+    .comment-label {
+        font-size: 0.7rem;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 2px;
+        opacity: 0.7;
+    }
+    .admin-bubble {
+        background: #d4e6ff;
+        align-self: flex-start;
+        border-bottom-left-radius: 2px;
+    }
+    .user-bubble {
+        background: #f0f0f0;
+        align-self: flex-end;
+        border-bottom-right-radius: 2px;
+    }
+    .comment-modal-footer {
+        display: flex;
+        gap: 8px;
+        padding: 12px 16px;
+        border-top: 1px solid #ddd;
+        background: #fafafa;
+    }
+    .chat-input {
+        flex: 1;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        padding: 8px 14px;
+        font-size: 0.9rem;
+        outline: none;
+    }
+    .chat-input:focus {
+        border-color: #4a90e2;
+    }
+    .chat-send-btn {
+        background: #4a90e2;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+    .chat-send-btn:hover {
+        background: #357abd;
+    }
+</style>
+}
+

@@ -13,6 +13,9 @@ public class ManagerApprovalItem
 
     public string AdminComment { get; set; } = string.Empty;
     public string UserComment { get; set; } = string.Empty;
+
+    public List<CommentApiItem> AllComments { get; set; } = new();
+    public bool HasUnreadUserComment { get; set; }
 }
 
 public class ApplicationApiItem

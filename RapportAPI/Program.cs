@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<RapportService>();
 
 builder.Services.AddDbContext<DatabasContext>(options =>
-    options.UseSqlite("Data Source=/home/site/wwwroot/rapport.db"));
+    options.UseSqlite("Data Source=rapport.db"));
 
 builder.Services.AddControllers();
 

@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Application_API.Models;
-using System.Net.Http;
+using SOS100.Models;
 using System.Net.Http.Json;
 
 namespace SOS100.Controllers;
@@ -8,30 +7,27 @@ namespace SOS100.Controllers;
 public class ApplicationsController : Controller
 {
     private readonly HttpClient _httpClient;
+    private readonly string _applicationApiUrl;
+    private readonly string _statusFormanerApiUrl;
 
-    public ApplicationsController(IHttpClientFactory factory)
+    public ApplicationsController(IHttpClientFactory factory, IConfiguration config)
     {
         _httpClient = factory.CreateClient();
+        _applicationApiUrl   = $"{config["ApiUrls:ApplicationApi"]}/api/applications";
+        _statusFormanerApiUrl = $"{config["ApiUrls:StatusFormanerApi"]}/ServiceStatus";
     }
 
     // GET: /Applications
     public async Task<IActionResult> Index()
     {
-        var data = await _httpClient.GetFromJsonAsync<List<Application>>(
-            "http://localhost:5050/api/applications"
-        );
-
+        var data = await _httpClient.GetFromJsonAsync<List<Application>>(_applicationApiUrl);
         return View(data);
     }
 
     // GET: /Applications/Create
     public IActionResult Create(string benefit)
     {
-        var model = new Application
-        {
-            BenefitName = benefit
-        };
-
+        var model = new Application { BenefitName = benefit };
         return View(model);
     }
 
@@ -41,10 +37,7 @@ public class ApplicationsController : Controller
     {
         application.Status = "Pending";
 
-        var response = await _httpClient.PostAsJsonAsync(
-            "http://localhost:5050/api/applications",
-            application
-        );
+        var response = await _httpClient.PostAsJsonAsync(_applicationApiUrl, application);
 
         var createdApp = await response.Content.ReadFromJsonAsync<Application>();
         if (createdApp != null)
@@ -56,12 +49,9 @@ public class ApplicationsController : Controller
                 Name = createdApp.EmployeeName
             };
 
-            await _httpClient.PostAsJsonAsync(
-                "http://localhost:5030/ServiceStatus",
-                serviceStatus
-            );
+            await _httpClient.PostAsJsonAsync(_statusFormanerApiUrl, serviceStatus);
         }
 
-        return RedirectToAction("Index");
+        return RedirectToAction("Forman", "Forman");
     }
 }

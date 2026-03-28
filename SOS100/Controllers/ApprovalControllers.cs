@@ -10,36 +10,49 @@ namespace SOS100.Controllers;
 public class ApprovalController : Controller
 {
     private readonly HttpClient _httpClient;
+    private readonly string _approvalsApiUrl;
+    private readonly string _commentsApiUrl;
+    private readonly string _serviceStatusApiUrl;
+    private readonly string _applicationsApiUrl;
 
-    private const string ApprovalsApiUrl = "http://localhost:5130/api/approvals";
-    private const string CommentsApiUrl = "http://localhost:5030/Comments";
-    private const string ServiceStatusApiUrl = "http://localhost:5030/ServiceStatus";
-    private const string ApplicationsApiUrl = "http://localhost:5050/api/applications";
-
-    public ApprovalController()
+    public ApprovalController(IConfiguration config)
     {
         _httpClient = new HttpClient();
+        var godkannadeBase = config["ApiUrls:GodkannadeApi"];
+        var statusBase     = config["ApiUrls:StatusFormanerApi"];
+        var applicationBase = config["ApiUrls:ApplicationApi"];
+
+        _approvalsApiUrl    = $"{godkannadeBase}/api/approvals";
+        _commentsApiUrl     = $"{statusBase}/Comments";
+        _serviceStatusApiUrl = $"{statusBase}/ServiceStatus";
+        _applicationsApiUrl  = $"{applicationBase}/api/applications";
     }
 
     public async Task<IActionResult> Index()
     {
         try
         {
-            var comments = await _httpClient.GetFromJsonAsync<List<CommentApiItem>>(CommentsApiUrl)
+            var comments = await _httpClient.GetFromJsonAsync<List<CommentApiItem>>(_commentsApiUrl)
                            ?? new List<CommentApiItem>();
 
-            var statuses = await _httpClient.GetFromJsonAsync<List<ServiceStatusApiItem>>(ServiceStatusApiUrl)
+            var statuses = await _httpClient.GetFromJsonAsync<List<ServiceStatusApiItem>>(_serviceStatusApiUrl)
                            ?? new List<ServiceStatusApiItem>();
 
-            var applications = await _httpClient.GetFromJsonAsync<List<ApplicationApiItem>>(ApplicationsApiUrl)
+            var applications = await _httpClient.GetFromJsonAsync<List<ApplicationApiItem>>(_applicationsApiUrl)
                                ?? new List<ApplicationApiItem>();
 
             var items = statuses.Select(status =>
             {
-                var latestComment = comments
+                var statusComments = comments
                     .Where(c => c.StatusOBJ == status.ID)
-                    .OrderByDescending(c => c.ID)
-                    .FirstOrDefault();
+                    .OrderBy(c => c.ID)
+                    .ToList();
+
+                var latestComment = statusComments.LastOrDefault();
+
+                var hasUnread = latestComment != null
+                    && !string.IsNullOrWhiteSpace(latestComment.UserCommemt)
+                    && string.IsNullOrWhiteSpace(latestComment.AdminComment);
 
                 var application = applications.FirstOrDefault(a => a.Id == status.ServicID);
 
@@ -52,7 +65,9 @@ public class ApprovalController : Controller
                     ApplicationMessage = application?.Message ?? string.Empty,
                     Status = string.IsNullOrWhiteSpace(status.Status) ? "Pending" : status.Status,
                     AdminComment = latestComment?.AdminComment ?? string.Empty,
-                    UserComment = latestComment?.UserCommemt ?? string.Empty
+                    UserComment = latestComment?.UserCommemt ?? string.Empty,
+                    AllComments = statusComments,
+                    HasUnreadUserComment = hasUnread
                 };
             }).ToList();
 
@@ -82,7 +97,7 @@ public class ApprovalController : Controller
     private async Task UpdateStatusAndComment(int statusId, int applicationId, string newStatus, string comment)
     {
         await _httpClient.PutAsJsonAsync(
-            $"{ServiceStatusApiUrl}/{statusId}/status",
+            $"{_serviceStatusApiUrl}/{statusId}/status",
             newStatus
         );
 
@@ -95,10 +110,10 @@ public class ApprovalController : Controller
                 UserCommemt = string.Empty
             };
 
-            await _httpClient.PostAsJsonAsync(CommentsApiUrl, commentPayload);
+            await _httpClient.PostAsJsonAsync(_commentsApiUrl, commentPayload);
         }
 
-        var approvals = await _httpClient.GetFromJsonAsync<List<Approval>>(ApprovalsApiUrl)
+        var approvals = await _httpClient.GetFromJsonAsync<List<Approval>>(_approvalsApiUrl)
                         ?? new List<Approval>();
 
         var existingApproval = approvals.FirstOrDefault(a => a.ApplicationId == applicationId);
@@ -114,7 +129,7 @@ public class ApprovalController : Controller
                 DecisionDate = DateTime.UtcNow
             };
 
-            await _httpClient.PostAsJsonAsync(ApprovalsApiUrl, newApproval);
+            await _httpClient.PostAsJsonAsync(_approvalsApiUrl, newApproval);
         }
         else
         {
@@ -123,7 +138,7 @@ public class ApprovalController : Controller
             existingApproval.DecisionDate = DateTime.UtcNow;
 
             await _httpClient.PutAsJsonAsync(
-                $"{ApprovalsApiUrl}/{existingApproval.Id}",
+                $"{_approvalsApiUrl}/{existingApproval.Id}",
                 existingApproval
             );
         }

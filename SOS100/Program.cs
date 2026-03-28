@@ -10,19 +10,17 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options => options.LoginPath = "/Account/Index");
 
-builder.Services.AddHttpClient<FormanService>((serviceProvider, httpClient)  =>
+builder.Services.AddHttpClient<FormanService>((serviceProvider, httpClient) =>
 {
-    
     var config = serviceProvider.GetRequiredService<IConfiguration>();
-    
-    string adress = config.GetValue<string>("SOS100Adress") ?? "";
-    
-    httpClient.BaseAddress = new Uri(adress);
+    string adress = config["ApiUrls:FormanerApi"] ?? config.GetValue<string>("SOS100Adress") ?? "";
+    httpClient.BaseAddress = new Uri(adress + "/");
 });
 
 builder.Services.AddHttpClient<FormanerStatusService>((serviceProvider, httpClient) =>
 {
-    httpClient.BaseAddress = new Uri("http://localhost:5030/");
+    var config = serviceProvider.GetRequiredService<IConfiguration>();
+    httpClient.BaseAddress = new Uri(config["ApiUrls:StatusFormanerApi"] + "/");
 });
 
 builder.Services.AddHttpClient<RapportService>((serviceProvider, httpClient) =>
