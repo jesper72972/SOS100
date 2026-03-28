@@ -14,6 +14,7 @@ public class ApprovalController : Controller
     private const string ApprovalsApiUrl = "http://localhost:5130/api/approvals";
     private const string CommentsApiUrl = "http://localhost:5030/Comments";
     private const string ServiceStatusApiUrl = "http://localhost:5030/ServiceStatus";
+    private const string ApplicationsApiUrl = "http://localhost:5050/api/applications";
 
     public ApprovalController()
     {
@@ -30,6 +31,9 @@ public class ApprovalController : Controller
             var statuses = await _httpClient.GetFromJsonAsync<List<ServiceStatusApiItem>>(ServiceStatusApiUrl)
                            ?? new List<ServiceStatusApiItem>();
 
+            var applications = await _httpClient.GetFromJsonAsync<List<ApplicationApiItem>>(ApplicationsApiUrl)
+                               ?? new List<ApplicationApiItem>();
+
             var items = statuses.Select(status =>
             {
                 var latestComment = comments
@@ -37,13 +41,15 @@ public class ApprovalController : Controller
                     .OrderByDescending(c => c.ID)
                     .FirstOrDefault();
 
+                var application = applications.FirstOrDefault(a => a.Id == status.ServicID);
+
                 return new ManagerApprovalItem
                 {
                     StatusId = status.ID,
-                    ApplicationId = status.ID,
-                    EmployeeName = status.Name,
-                    BenefitName = "Förmån",
-                    ApplicationMessage = "Ansökan från användare",
+                    ApplicationId = status.ServicID,
+                    EmployeeName = application?.EmployeeName ?? status.Name,
+                    BenefitName = application?.BenefitName ?? "Förmån",
+                    ApplicationMessage = application?.Message ?? string.Empty,
                     Status = string.IsNullOrWhiteSpace(status.Status) ? "Pending" : status.Status,
                     AdminComment = latestComment?.AdminComment ?? string.Empty,
                     UserComment = latestComment?.UserCommemt ?? string.Empty

@@ -34,6 +34,15 @@ public class ServiceStatusController : ControllerBase
         return Ok(status);
     }
 
+    [HttpPost]
+    public async Task<IActionResult> Create([FromBody] ServiceStatus serviceStatus)
+    {
+        serviceStatus.ID = serviceStatus.ServicID;
+        _db.ServiceStatuses.Add(serviceStatus);
+        await _db.SaveChangesAsync();
+        return CreatedAtAction(nameof(GetById), new { id = serviceStatus.ID }, serviceStatus);
+    }
+
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id)
     {

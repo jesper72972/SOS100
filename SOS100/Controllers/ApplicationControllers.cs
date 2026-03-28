@@ -41,10 +41,26 @@ public class ApplicationsController : Controller
     {
         application.Status = "Pending";
 
-        await _httpClient.PostAsJsonAsync(
+        var response = await _httpClient.PostAsJsonAsync(
             "http://localhost:5050/api/applications",
             application
         );
+
+        var createdApp = await response.Content.ReadFromJsonAsync<Application>();
+        if (createdApp != null)
+        {
+            var serviceStatus = new
+            {
+                ServicID = createdApp.Id,
+                Status = "Pending",
+                Name = createdApp.EmployeeName
+            };
+
+            await _httpClient.PostAsJsonAsync(
+                "http://localhost:5030/ServiceStatus",
+                serviceStatus
+            );
+        }
 
         return RedirectToAction("Index");
     }
