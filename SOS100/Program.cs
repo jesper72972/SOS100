@@ -25,12 +25,14 @@ builder.Services.AddHttpClient<FormanerStatusService>((serviceProvider, httpClie
 
 builder.Services.AddHttpClient<RapportService>((serviceProvider, httpClient) =>
 {
-    httpClient.BaseAddress = new Uri("https://app-sos100-rapport-b6bncnaga4h6e7du.swedencentral-01.azurewebsites.net/");
+    var config = serviceProvider.GetRequiredService<IConfiguration>();
+    httpClient.BaseAddress = new Uri(config["ApiUrls:Rapport"] + "/");
 });
 
 builder.Services.AddHttpClient<RapportPostService>((serviceProvider, httpClient) =>
 {
-    httpClient.BaseAddress = new Uri("https://app-sos100-rapport-b6bncnaga4h6e7du.swedencentral-01.azurewebsites.net/");
+    var config = serviceProvider.GetRequiredService<IConfiguration>();
+    httpClient.BaseAddress = new Uri(config["ApiUrls:Rapport"] + "/");
 });
 
 builder.Services.AddSession();
