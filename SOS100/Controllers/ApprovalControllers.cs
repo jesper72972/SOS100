@@ -1,5 +1,4 @@
 ﻿using System.Net.Http.Json;
-using System.Text.Json;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SOS100.Models;
@@ -18,30 +17,60 @@ public class ApprovalController : Controller
     public ApprovalController(IConfiguration config)
     {
         _httpClient = new HttpClient();
+
         var godkannadeBase = config["ApiUrls:GodkannadeApi"];
-        var statusBase     = config["ApiUrls:StatusFormanerApi"];
+        var statusBase = config["ApiUrls:StatusFormanerApi"];
         var applicationBase = config["ApiUrls:ApplicationApi"];
 
-        _approvalsApiUrl    = $"{godkannadeBase}/api/approvals";
-        _commentsApiUrl     = $"{statusBase}/Comments";
+        _approvalsApiUrl = $"{godkannadeBase}/api/approvals";
+        _commentsApiUrl = $"{statusBase}/Comments";
         _serviceStatusApiUrl = $"{statusBase}/ServiceStatus";
-        _applicationsApiUrl  = $"{applicationBase}/api/applications";
+        _applicationsApiUrl = $"{applicationBase}/api/applications";
     }
 
     public async Task<IActionResult> Index()
     {
+        var errors = new List<string>();
+
+        List<CommentApiItem> comments = new();
+        List<ServiceStatusApiItem> statuses = new();
+        List<ApplicationApiItem> applications = new();
+
         try
         {
-            var comments = await _httpClient.GetFromJsonAsync<List<CommentApiItem>>(_commentsApiUrl)
-                           ?? new List<CommentApiItem>();
+            comments = await _httpClient.GetFromJsonAsync<List<CommentApiItem>>(_commentsApiUrl)
+                       ?? new List<CommentApiItem>();
+        }
+        catch
+        {
+            errors.Add("Comments API fungerade inte.");
+        }
 
-            var statuses = await _httpClient.GetFromJsonAsync<List<ServiceStatusApiItem>>(_serviceStatusApiUrl)
-                           ?? new List<ServiceStatusApiItem>();
+        try
+        {
+            statuses = await _httpClient.GetFromJsonAsync<List<ServiceStatusApiItem>>(_serviceStatusApiUrl)
+                       ?? new List<ServiceStatusApiItem>();
+        }
+        catch
+        {
+            errors.Add("Status API fungerade inte.");
+        }
 
-            var applications = await _httpClient.GetFromJsonAsync<List<ApplicationApiItem>>(_applicationsApiUrl)
-                               ?? new List<ApplicationApiItem>();
+        try
+        {
+            applications = await _httpClient.GetFromJsonAsync<List<ApplicationApiItem>>(_applicationsApiUrl)
+                           ?? new List<ApplicationApiItem>();
+        }
+        catch
+        {
+            errors.Add("Applications API fungerade inte.");
+        }
 
-            var items = statuses.Select(status =>
+        var items = new List<ManagerApprovalItem>();
+
+        if (statuses.Any())
+        {
+            items = statuses.Select(status =>
             {
                 var statusComments = comments
                     .Where(c => c.StatusOBJ == status.ID)
@@ -70,14 +99,27 @@ public class ApprovalController : Controller
                     HasUnreadUserComment = hasUnread
                 };
             }).ToList();
-
-            return View(items);
         }
-        catch (Exception ex)
+        else if (applications.Any())
         {
-            ViewBag.Error = $"Kunde inte hämta data från de andra tjänsterna: {ex.Message}";
-            return View(new List<ManagerApprovalItem>());
+            items = applications.Select(app => new ManagerApprovalItem
+            {
+                StatusId = app.Id,
+                ApplicationId = app.Id,
+                EmployeeName = app.EmployeeName,
+                BenefitName = app.BenefitName,
+                ApplicationMessage = app.Message ?? string.Empty,
+                Status = string.IsNullOrWhiteSpace(app.Status) ? "Pending" : app.Status,
+                AdminComment = string.Empty,
+                UserComment = string.Empty,
+                AllComments = new List<CommentApiItem>(),
+                HasUnreadUserComment = false
+            }).ToList();
         }
+
+        ViewBag.Errors = errors;
+
+        return View(items);
     }
 
     [HttpPost]
@@ -96,51 +138,109 @@ public class ApprovalController : Controller
 
     private async Task UpdateStatusAndComment(int statusId, int applicationId, string newStatus, string comment)
     {
-        await _httpClient.PutAsJsonAsync(
-            $"{_serviceStatusApiUrl}/{statusId}/status",
-            newStatus
-        );
+        var warnings = new List<string>();
 
-        if (!string.IsNullOrWhiteSpace(comment))
+        // 1. Spara alltid approval först
+        try
         {
-            var commentPayload = new CommentApiItem
-            {
-                StatusOBJ = statusId,
-                AdminComment = comment,
-                UserCommemt = string.Empty
-            };
+            var approvals = await _httpClient.GetFromJsonAsync<List<Approval>>(_approvalsApiUrl)
+                            ?? new List<Approval>();
 
-            await _httpClient.PostAsJsonAsync(_commentsApiUrl, commentPayload);
+            var existingApproval = approvals.FirstOrDefault(a => a.ApplicationId == applicationId);
+
+            if (existingApproval == null)
+            {
+                var newApproval = new Approval
+                {
+                    ApplicationId = applicationId,
+                    ApproverId = 101,
+                    Decision = newStatus,
+                    Comment = comment ?? string.Empty,
+                    DecisionDate = DateTime.UtcNow
+                };
+
+                var approvalResponse = await _httpClient.PostAsJsonAsync(_approvalsApiUrl, newApproval);
+
+                if (!approvalResponse.IsSuccessStatusCode)
+                {
+                    TempData["Error"] = "Kunde inte spara beslutet i Godkännande API.";
+                    return;
+                }
+            }
+            else
+            {
+                existingApproval.Decision = newStatus;
+                existingApproval.Comment = comment ?? string.Empty;
+                existingApproval.DecisionDate = DateTime.UtcNow;
+
+                var approvalResponse = await _httpClient.PutAsJsonAsync(
+                    $"{_approvalsApiUrl}/{existingApproval.Id}",
+                    existingApproval
+                );
+
+                if (!approvalResponse.IsSuccessStatusCode)
+                {
+                    TempData["Error"] = "Kunde inte uppdatera beslutet i Godkännande API.";
+                    return;
+                }
+            }
+        }
+        catch
+        {
+            TempData["Error"] = "Kunde inte spara beslutet i Godkännande API.";
+            return;
         }
 
-        var approvals = await _httpClient.GetFromJsonAsync<List<Approval>>(_approvalsApiUrl)
-                        ?? new List<Approval>();
-
-        var existingApproval = approvals.FirstOrDefault(a => a.ApplicationId == applicationId);
-
-        if (existingApproval == null)
+        // 2. Försök uppdatera status
+        try
         {
-            var newApproval = new Approval
-            {
-                ApplicationId = applicationId,
-                ApproverId = 101,
-                Decision = newStatus,
-                Comment = comment ?? string.Empty,
-                DecisionDate = DateTime.UtcNow
-            };
+            var statusResponse = await _httpClient.PutAsJsonAsync(
+                $"{_serviceStatusApiUrl}/{statusId}/status",
+                newStatus
+            );
 
-            await _httpClient.PostAsJsonAsync(_approvalsApiUrl, newApproval);
+            if (!statusResponse.IsSuccessStatusCode)
+            {
+                warnings.Add("Status API fungerade inte.");
+            }
+        }
+        catch
+        {
+            warnings.Add("Status API fungerade inte.");
+        }
+
+        // 3. Försök spara kommentar
+        if (!string.IsNullOrWhiteSpace(comment))
+        {
+            try
+            {
+                var commentPayload = new CommentApiItem
+                {
+                    StatusOBJ = statusId,
+                    AdminComment = comment,
+                    UserCommemt = string.Empty
+                };
+
+                var commentResponse = await _httpClient.PostAsJsonAsync(_commentsApiUrl, commentPayload);
+
+                if (!commentResponse.IsSuccessStatusCode)
+                {
+                    warnings.Add("Comments API fungerade inte.");
+                }
+            }
+            catch
+            {
+                warnings.Add("Comments API fungerade inte.");
+            }
+        }
+
+        if (warnings.Any())
+        {
+            TempData["Warning"] = $"Beslutet sparades, men: {string.Join(" ", warnings)}";
         }
         else
         {
-            existingApproval.Decision = newStatus;
-            existingApproval.Comment = comment ?? string.Empty;
-            existingApproval.DecisionDate = DateTime.UtcNow;
-
-            await _httpClient.PutAsJsonAsync(
-                $"{_approvalsApiUrl}/{existingApproval.Id}",
-                existingApproval
-            );
+            TempData["Success"] = "Beslutet sparades.";
         }
     }
 }

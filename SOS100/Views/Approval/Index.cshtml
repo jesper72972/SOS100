@@ -13,10 +13,20 @@
         Här kan HR granska ansökningar, se kommentarer och sedan godkänna eller neka.
     </p>
 
-    @if (ViewBag.Error != null)
+    @if (ViewBag.Errors != null)
     {
-        <p style="color:red;">@ViewBag.Error</p>
+        var errors = ViewBag.Errors as List<string>;
+        if (errors != null && errors.Any())
+        {
+            <div style="color:red; margin-bottom: 15px;">
+                @foreach (var error in errors)
+                {
+                    <p>@error</p>
+                }
+            </div>
+        }
     }
+
 
     @if (Model == null || !Model.Any())
     {
