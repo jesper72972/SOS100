@@ -39,7 +39,7 @@ using (var scope = app.Services.CreateScope())
     db.Database.Migrate();
 }
 
-if (app.Environment.IsDevelopment())
+
 {
     app.MapOpenApi();
     app.MapScalarApiReference();

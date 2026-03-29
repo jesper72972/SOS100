@@ -36,7 +36,7 @@ using (var scope = app.Services.CreateScope())
     appDbContext.Database.Migrate();
 }
 
-if (app.Environment.IsDevelopment())
+
 {
     app.MapOpenApi();
     app.MapScalarApiReference();
