@@ -17,8 +17,16 @@ public class RapportPostController : Controller
 
     public async Task<IActionResult> Index()
     {
-        var poster = await _service.GetAllAsync();
-        return View(poster);
+        try
+        {
+            var poster = await _service.GetAllAsync();
+            return View(poster);
+        }
+        catch (Exception ex)
+        {
+            TempData["Felmeddelande"] = $"Kunde inte hämta rapportposter: {ex.Message}";
+            return View(new List<RapportPostDto>());
+        }
     }
 
     public IActionResult Create()
@@ -34,14 +42,30 @@ public class RapportPostController : Controller
             return View(dto);
         }
 
-        await _service.CreateAsync(dto);
-        return RedirectToAction(nameof(Index));
+        try
+        {
+            await _service.CreateAsync(dto);
+            return RedirectToAction(nameof(Index));
+        }
+        catch (Exception ex)
+        {
+            TempData["Felmeddelande"] = $"Kunde inte skapa rapportpost: {ex.Message}";
+            return View(dto);
+        }
     }
 
     public async Task<IActionResult> Edit(int id)
     {
-        var post = await _service.GetByIdAsync(id);
-        return View(post);
+        try
+        {
+            var post = await _service.GetByIdAsync(id);
+            return View(post);
+        }
+        catch (Exception ex)
+        {
+            TempData["Felmeddelande"] = $"Kunde inte hämta rapportpost: {ex.Message}";
+            return RedirectToAction(nameof(Index));
+        }
     }
 
     [HttpPost]
@@ -52,20 +76,44 @@ public class RapportPostController : Controller
             return View(dto);
         }
 
-        await _service.UpdateAsync(dto);
-        return RedirectToAction(nameof(Index));
+        try
+        {
+            await _service.UpdateAsync(dto);
+            return RedirectToAction(nameof(Index));
+        }
+        catch (Exception ex)
+        {
+            TempData["Felmeddelande"] = $"Kunde inte uppdatera rapportpost: {ex.Message}";
+            return View(dto);
+        }
     }
 
     public async Task<IActionResult> Delete(int id)
     {
-        var post = await _service.GetByIdAsync(id);
-        return View(post);
+        try
+        {
+            var post = await _service.GetByIdAsync(id);
+            return View(post);
+        }
+        catch (Exception ex)
+        {
+            TempData["Felmeddelande"] = $"Kunde inte hämta rapportpost: {ex.Message}";
+            return RedirectToAction(nameof(Index));
+        }
     }
 
     [HttpPost, ActionName("Delete")]
     public async Task<IActionResult> DeleteConfirmed(int id)
     {
-        await _service.DeleteAsync(id);
-        return RedirectToAction(nameof(Index));
+        try
+        {
+            await _service.DeleteAsync(id);
+            return RedirectToAction(nameof(Index));
+        }
+        catch (Exception ex)
+        {
+            TempData["Felmeddelande"] = $"Kunde inte ta bort rapportpost: {ex.Message}";
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

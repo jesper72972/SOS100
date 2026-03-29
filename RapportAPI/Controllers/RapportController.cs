@@ -17,7 +17,18 @@ public class RapportController : ControllerBase
     [HttpGet("statistik")]
     public async Task<IActionResult> HamtaStatistik()
     {
-        var resultat = await _rapportService.HamtaStatistikAsync();
-        return Ok(resultat);
+        try
+        {
+            var resultat = await _rapportService.HamtaStatistikAsync();
+            return Ok(resultat);
+        }
+        catch (InvalidOperationException ex)
+        {
+            return StatusCode(503, new { fel = ex.Message });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { fel = "Ett oväntat fel inträffade.", detaljer = ex.Message });
+        }
     }
 }

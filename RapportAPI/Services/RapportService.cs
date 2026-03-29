@@ -24,16 +24,34 @@ public class RapportService
             string.IsNullOrWhiteSpace(applicationsApiUrl) ||
             string.IsNullOrWhiteSpace(godkannandenApiUrl))
         {
-            throw new Exception("API-URL:er saknas i appsettings.");
+            throw new InvalidOperationException("API-URL:er saknas i appsettings.");
         }
 
-        var formanerResponse = await _httpClient.GetAsync($"{formanerApiUrl}/Formaner");
-        var applicationsResponse = await _httpClient.GetAsync($"{applicationsApiUrl}/api/Applications");
-        var approvalsResponse = await _httpClient.GetAsync($"{godkannandenApiUrl}/api/Approvals");
+        HttpResponseMessage formanerResponse;
+        HttpResponseMessage applicationsResponse;
+        HttpResponseMessage approvalsResponse;
 
-        formanerResponse.EnsureSuccessStatusCode();
-        applicationsResponse.EnsureSuccessStatusCode();
-        approvalsResponse.EnsureSuccessStatusCode();
+        try
+        {
+            formanerResponse = await _httpClient.GetAsync($"{formanerApiUrl}/Formaner");
+            applicationsResponse = await _httpClient.GetAsync($"{applicationsApiUrl}/api/Applications");
+            approvalsResponse = await _httpClient.GetAsync($"{godkannandenApiUrl}/api/Approvals");
+        }
+        catch (HttpRequestException ex)
+        {
+            throw new InvalidOperationException($"Kunde inte nå ett eller flera externa API:er: {ex.Message}", ex);
+        }
+        catch (TaskCanceledException ex)
+        {
+            throw new InvalidOperationException("Tidsgräns överskriden vid anrop till externt API.", ex);
+        }
+
+        if (!formanerResponse.IsSuccessStatusCode)
+            throw new InvalidOperationException($"Förmåner-API svarade med statuskod {(int)formanerResponse.StatusCode}.");
+        if (!applicationsResponse.IsSuccessStatusCode)
+            throw new InvalidOperationException($"Applications-API svarade med statuskod {(int)applicationsResponse.StatusCode}.");
+        if (!approvalsResponse.IsSuccessStatusCode)
+            throw new InvalidOperationException($"Godkännande-API svarade med statuskod {(int)approvalsResponse.StatusCode}.");
 
         var jsonOptions = new JsonSerializerOptions
         {

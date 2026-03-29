@@ -16,7 +16,25 @@ public class RapportController : Controller
 
     public async Task<IActionResult> Rapport()
     {
-        var statistik = await _rapportService.GetStatistikAsync();
-        return View(statistik);
+        try
+        {
+            var statistik = await _rapportService.GetStatistikAsync();
+            if (statistik == null)
+            {
+                TempData["Felmeddelande"] = "Statistik kunde inte hämtas – API:et returnerade ett tomt svar.";
+                return View(new SOS100.Models.RapportStatistik());
+            }
+            return View(statistik);
+        }
+        catch (InvalidOperationException ex)
+        {
+            TempData["Felmeddelande"] = ex.Message;
+            return View(new SOS100.Models.RapportStatistik());
+        }
+        catch (Exception ex)
+        {
+            TempData["Felmeddelande"] = $"Ett oväntat fel inträffade: {ex.Message}";
+            return View(new SOS100.Models.RapportStatistik());
+        }
     }
 }

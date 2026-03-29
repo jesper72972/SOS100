@@ -4,6 +4,13 @@
     ViewData["Title"] = "Rapport och statistik";
 }
 
+@if (TempData["Felmeddelande"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        <strong>Fel:</strong> @TempData["Felmeddelande"]
+    </div>
+}
+
 <h1>Rapport och statistik</h1>
 
 <div class="mb-4">
