@@ -6,7 +6,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-
 builder.Services.AddDbContext<ApprovalDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -32,22 +31,20 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<ApprovalDbContext>();
     db.Database.Migrate();
 }
 
-
 {
     app.MapOpenApi();
     app.MapScalarApiReference();
 }
 
-app.MapControllers();
-
 app.UseCors("ReactAppPolicy");
+
+app.MapControllers();
 
 app.MapGet("/", () => "GodkannandeAPI is running");
 
